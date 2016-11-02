@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActualityVCCellID" rowHeight="345" id="KGk-i7-Jjw" customClass="ActualityVCCell">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="345"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="408" height="344"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E78-9G-gRM">
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-I2-MGu">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUg-N2-Azo">
+                                        <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="1KI-YJ-Z2G"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52h-tt-7J2">
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="122" image="艺术观列表1">
+                                            <color key="titleColor" red="0.56470588239999997" green="0.56862745100000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KUg-N2-Azo" secondAttribute="bottom" constant="5" id="2xg-YM-fph"/>
+                                    <constraint firstItem="52h-tt-7J2" firstAttribute="leading" secondItem="tfU-I2-MGu" secondAttribute="leading" id="8Nj-nC-chK"/>
+                                    <constraint firstItem="52h-tt-7J2" firstAttribute="top" secondItem="tfU-I2-MGu" secondAttribute="top" id="AZV-Ed-IdE"/>
+                                    <constraint firstAttribute="trailing" secondItem="KUg-N2-Azo" secondAttribute="trailing" id="AZV-Wj-XJI"/>
+                                    <constraint firstAttribute="bottom" secondItem="52h-tt-7J2" secondAttribute="bottom" id="I23-sC-32v"/>
+                                    <constraint firstAttribute="trailing" secondItem="52h-tt-7J2" secondAttribute="trailing" id="IWv-t9-dna"/>
+                                    <constraint firstItem="KUg-N2-Azo" firstAttribute="top" secondItem="tfU-I2-MGu" secondAttribute="top" constant="5" id="iAg-iu-d98"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0F-MJ-y6a">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqG-JM-tqu">
+                                        <frame key="frameInset" width="136" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="122" image="艺术观列表3">
+                                            <color key="titleColor" red="0.56470588235294117" green="0.56862745098039214" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-pP-jIf">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8X-Kg-lRC">
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.80784313730000001" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="Qhb-XR-3aB"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaQ-JT-mo0">
+                                        <frame key="frameInset" width="136" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="122" image="艺术观列表2">
+                                            <color key="titleColor" red="0.56470588239999997" green="0.56862745100000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R8X-Kg-lRC" secondAttribute="bottom" constant="5" id="SzR-6A-Dxo"/>
+                                    <constraint firstAttribute="trailing" secondItem="R8X-Kg-lRC" secondAttribute="trailing" id="cgu-pS-39j"/>
+                                    <constraint firstItem="R8X-Kg-lRC" firstAttribute="top" secondItem="Xod-pP-jIf" secondAttribute="top" constant="5" id="xYu-Th-qyQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xod-pP-jIf" secondAttribute="bottom" id="1bK-kj-xFc"/>
+                            <constraint firstAttribute="trailing" secondItem="w0F-MJ-y6a" secondAttribute="trailing" id="5W7-sN-KuW"/>
+                            <constraint firstItem="tfU-I2-MGu" firstAttribute="leading" secondItem="E78-9G-gRM" secondAttribute="leading" id="5fA-Lg-8mR"/>
+                            <constraint firstItem="Xod-pP-jIf" firstAttribute="top" secondItem="E78-9G-gRM" secondAttribute="top" id="Ef4-vu-S2a"/>
+                            <constraint firstItem="w0F-MJ-y6a" firstAttribute="width" secondItem="tfU-I2-MGu" secondAttribute="width" id="TUg-1x-l0T"/>
+                            <constraint firstAttribute="bottom" secondItem="w0F-MJ-y6a" secondAttribute="bottom" id="WHO-a7-hLo"/>
+                            <constraint firstItem="Xod-pP-jIf" firstAttribute="height" secondItem="tfU-I2-MGu" secondAttribute="height" id="a1a-Yp-i7o"/>
+                            <constraint firstItem="w0F-MJ-y6a" firstAttribute="top" secondItem="E78-9G-gRM" secondAttribute="top" id="bsk-R8-hYE"/>
+                            <constraint firstItem="w0F-MJ-y6a" firstAttribute="leading" secondItem="Xod-pP-jIf" secondAttribute="trailing" id="fXF-jj-hQx"/>
+                            <constraint firstItem="Xod-pP-jIf" firstAttribute="leading" secondItem="tfU-I2-MGu" secondAttribute="trailing" id="fuu-hZ-93z"/>
+                            <constraint firstItem="Xod-pP-jIf" firstAttribute="width" secondItem="tfU-I2-MGu" secondAttribute="width" id="fxi-bV-Zoj"/>
+                            <constraint firstItem="w0F-MJ-y6a" firstAttribute="height" secondItem="tfU-I2-MGu" secondAttribute="height" id="kXs-NB-Pgn"/>
+                            <constraint firstAttribute="height" constant="44" id="kde-8o-rW7"/>
+                            <constraint firstItem="tfU-I2-MGu" firstAttribute="top" secondItem="E78-9G-gRM" secondAttribute="top" id="laY-lW-6LU"/>
+                            <constraint firstAttribute="bottom" secondItem="tfU-I2-MGu" secondAttribute="bottom" id="peM-EQ-IT6"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涵盖70年艺术创作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it6-Cq-ufb">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="sWh-QL-ahP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-10-15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxb-MB-8kp">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-1b-Fp6">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">艺术 （文化名词） 编辑
+艺术，是才艺和技术的统称，词义很广，后慢慢加入各种优质思想而演化成一种对美，思想，境界的术语。艺术是用形象来反映现实但比现实有典型性的社会意识形态，包括文学、书法、绘画、摄影、雕塑、建筑、音乐、舞蹈、戏剧、电影、曲艺、电子游戏</string>
+                        <color key="textColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNl-q4-EoW">
+                        <color key="backgroundColor" red="0.74117647058823533" green="0.74509803921568629" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ge3-UZ-R1u"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-mE-2nf">
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="VLz-b6-Gh3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kxb-MB-8kp" firstAttribute="top" secondItem="it6-Cq-ufb" secondAttribute="bottom" constant="8" id="1M5-wy-yVi"/>
+                    <constraint firstItem="E78-9G-gRM" firstAttribute="top" secondItem="pNl-q4-EoW" secondAttribute="bottom" id="1ff-Oo-RaV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pNl-q4-EoW" secondAttribute="trailing" id="3aZ-Da-gQQ"/>
+                    <constraint firstAttribute="bottom" secondItem="E78-9G-gRM" secondAttribute="bottom" constant="15" id="4m9-7t-GYB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Eab-1b-Fp6" secondAttribute="trailing" constant="15" id="5J2-j9-wfC"/>
+                    <constraint firstItem="it6-Cq-ufb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ihq-gJ-66p"/>
+                    <constraint firstItem="Eab-1b-Fp6" firstAttribute="top" secondItem="kxb-MB-8kp" secondAttribute="bottom" constant="7.5" id="LaS-Zw-Qof"/>
+                    <constraint firstItem="E78-9G-gRM" firstAttribute="top" secondItem="pNl-q4-EoW" secondAttribute="bottom" id="PyO-f5-DPZ"/>
+                    <constraint firstAttribute="trailing" secondItem="IDB-mE-2nf" secondAttribute="trailing" id="SE2-V3-aSA"/>
+                    <constraint firstItem="it6-Cq-ufb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="WRs-b0-gVg"/>
+                    <constraint firstItem="Eab-1b-Fp6" firstAttribute="bottom" secondItem="pNl-q4-EoW" secondAttribute="bottom" id="bTD-Sr-MNL"/>
+                    <constraint firstAttribute="bottom" secondItem="IDB-mE-2nf" secondAttribute="bottom" id="bah-gg-Hag"/>
+                    <constraint firstItem="pNl-q4-EoW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dqu-oy-hsg"/>
+                    <constraint firstItem="Eab-1b-Fp6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="epK-5d-yNy"/>
+                    <constraint firstItem="IDB-mE-2nf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f8w-Nt-0xD"/>
+                    <constraint firstAttribute="trailing" secondItem="E78-9G-gRM" secondAttribute="trailing" id="fIs-vG-0CE"/>
+                    <constraint firstItem="kxb-MB-8kp" firstAttribute="trailing" secondItem="it6-Cq-ufb" secondAttribute="trailing" id="flH-dn-xjV"/>
+                    <constraint firstItem="E78-9G-gRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hKZ-KR-hYR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="it6-Cq-ufb" secondAttribute="trailing" constant="15" id="hf0-s6-fUX"/>
+                    <constraint firstItem="kxb-MB-8kp" firstAttribute="leading" secondItem="it6-Cq-ufb" secondAttribute="leading" id="ovW-y3-MAm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-114" y="-170.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="艺术观列表1" width="22" height="22"/>
+        <image name="艺术观列表2" width="22" height="22"/>
+        <image name="艺术观列表3" width="22" height="22"/>
+    </resources>
+</document>
