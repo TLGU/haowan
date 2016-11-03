@@ -248,14 +248,14 @@ static NSString *HomePageHotCellID=@"HomePageHotCellID";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section!=0)
-    {
-        ProductionListVC *vc=[ProductionListVC new];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else{
-        ArtListVC *vc=[ArtListVC new];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+//    if (indexPath.section!=0)
+//    {
+//        ProductionListVC *vc=[ProductionListVC new];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }else{
+//        ArtListVC *vc=[ArtListVC new];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
 //    else
 //    {
 //        ArtListVC *vc=[ArtListVC new];
