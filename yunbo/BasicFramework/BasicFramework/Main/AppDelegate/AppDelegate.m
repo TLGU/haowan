@@ -4,7 +4,7 @@
 //
 //  Created by Rainy on 16/8/18.
 //  Copyright © 2016年 Rainy. All rights reserved.
-//
+//com.tongfu.caipiao2
 //pod install --verbose --no-repo-update
 //pod update --verbose --no-repo-update
 #import "AppDelegate.h"

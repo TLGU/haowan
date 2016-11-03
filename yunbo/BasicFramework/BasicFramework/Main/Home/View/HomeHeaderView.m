@@ -11,6 +11,7 @@
 #import "ArtisticVC.h"
 #import "ArtListVC.h"
 #import "ProductionListVC.h"
+#import "ArtGalleryVC.h"
 @interface HomeHeaderView ()<LBBannerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *right4View;
 @property(strong,nonatomic)NSMutableArray * imageURLArray;
@@ -136,6 +137,8 @@
         }break;
         case 2:{
             
+            UINavigationController *vc =[self getCurrentVC].childViewControllers[0];
+            [vc pushViewController:[ArtGalleryVC new] animated:YES];
         }break;
         case 3:{
             

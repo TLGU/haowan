@@ -84,6 +84,8 @@ static NSString *meCellID=@"meCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
