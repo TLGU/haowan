@@ -112,6 +112,20 @@
 		C823E2D31DCA3E7D00793046 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2D11DCA3E7D00793046 /* MeViewController.xib */; };
 		C823E2D61DCA3FA500793046 /* MeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2D51DCA3FA500793046 /* MeHeader.m */; };
 		C823E2D81DCA3FB000793046 /* MeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2D71DCA3FB000793046 /* MeHeader.xib */; };
+		C823E2E21DCB22BC00793046 /* ArtGalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2E01DCB22BC00793046 /* ArtGalleryVC.m */; };
+		C823E2E31DCB22BC00793046 /* ArtGalleryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2E11DCB22BC00793046 /* ArtGalleryVC.xib */; };
+		C823E2E71DCB24D500793046 /* ArtGalleryBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2E51DCB24D500793046 /* ArtGalleryBaseVC.m */; };
+		C823E2E81DCB24D500793046 /* ArtGalleryBaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2E61DCB24D500793046 /* ArtGalleryBaseVC.xib */; };
+		C823E2EC1DCB25CE00793046 /* ArtGalleryBaseVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2EA1DCB25CE00793046 /* ArtGalleryBaseVCCell.m */; };
+		C823E2ED1DCB25CE00793046 /* ArtGalleryBaseVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2EB1DCB25CE00793046 /* ArtGalleryBaseVCCell.xib */; };
+		C823E2F11DCB480200793046 /* ArtGalleryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2EF1DCB480200793046 /* ArtGalleryDetailVC.m */; };
+		C823E2F21DCB480200793046 /* ArtGalleryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2F01DCB480200793046 /* ArtGalleryDetailVC.xib */; };
+		C823E2F51DCB48C500793046 /* ArtGalleryDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2F41DCB48C500793046 /* ArtGalleryDetailHeader.m */; };
+		C823E2F71DCB48E200793046 /* ArtGalleryDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2F61DCB48E200793046 /* ArtGalleryDetailHeader.xib */; };
+		C823E2FB1DCB616200793046 /* ArtGalleryDetailVCCell0.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2F91DCB616200793046 /* ArtGalleryDetailVCCell0.m */; };
+		C823E2FC1DCB616200793046 /* ArtGalleryDetailVCCell0.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2FA1DCB616200793046 /* ArtGalleryDetailVCCell0.xib */; };
+		C823E3001DCB67B600793046 /* ArtGalleryDetailVCCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E2FE1DCB67B600793046 /* ArtGalleryDetailVCCell1.m */; };
+		C823E3011DCB67B600793046 /* ArtGalleryDetailVCCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E2FF1DCB67B600793046 /* ArtGalleryDetailVCCell1.xib */; };
 		C86CCBD81DC4792800D9F280 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */; };
 		C86CCBD91DC4792800D9F280 /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */; };
 		C86CCBDA1DC4792800D9F280 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC61DC4792800D9F280 /* LoginViewController.m */; };
@@ -437,6 +451,27 @@
 		C823E2D41DCA3FA500793046 /* MeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeHeader.h; sourceTree = "<group>"; };
 		C823E2D51DCA3FA500793046 /* MeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeHeader.m; sourceTree = "<group>"; };
 		C823E2D71DCA3FB000793046 /* MeHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeHeader.xib; sourceTree = "<group>"; };
+		C823E2DF1DCB22BC00793046 /* ArtGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryVC.h; sourceTree = "<group>"; };
+		C823E2E01DCB22BC00793046 /* ArtGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryVC.m; sourceTree = "<group>"; };
+		C823E2E11DCB22BC00793046 /* ArtGalleryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryVC.xib; sourceTree = "<group>"; };
+		C823E2E41DCB24D500793046 /* ArtGalleryBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryBaseVC.h; sourceTree = "<group>"; };
+		C823E2E51DCB24D500793046 /* ArtGalleryBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryBaseVC.m; sourceTree = "<group>"; };
+		C823E2E61DCB24D500793046 /* ArtGalleryBaseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryBaseVC.xib; sourceTree = "<group>"; };
+		C823E2E91DCB25CE00793046 /* ArtGalleryBaseVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryBaseVCCell.h; sourceTree = "<group>"; };
+		C823E2EA1DCB25CE00793046 /* ArtGalleryBaseVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryBaseVCCell.m; sourceTree = "<group>"; };
+		C823E2EB1DCB25CE00793046 /* ArtGalleryBaseVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryBaseVCCell.xib; sourceTree = "<group>"; };
+		C823E2EE1DCB480200793046 /* ArtGalleryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryDetailVC.h; sourceTree = "<group>"; };
+		C823E2EF1DCB480200793046 /* ArtGalleryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryDetailVC.m; sourceTree = "<group>"; };
+		C823E2F01DCB480200793046 /* ArtGalleryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryDetailVC.xib; sourceTree = "<group>"; };
+		C823E2F31DCB48C500793046 /* ArtGalleryDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtGalleryDetailHeader.h; path = ../vc/ArtGalleryDetailHeader.h; sourceTree = "<group>"; };
+		C823E2F41DCB48C500793046 /* ArtGalleryDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtGalleryDetailHeader.m; path = ../vc/ArtGalleryDetailHeader.m; sourceTree = "<group>"; };
+		C823E2F61DCB48E200793046 /* ArtGalleryDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryDetailHeader.xib; sourceTree = "<group>"; };
+		C823E2F81DCB616200793046 /* ArtGalleryDetailVCCell0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryDetailVCCell0.h; sourceTree = "<group>"; };
+		C823E2F91DCB616200793046 /* ArtGalleryDetailVCCell0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryDetailVCCell0.m; sourceTree = "<group>"; };
+		C823E2FA1DCB616200793046 /* ArtGalleryDetailVCCell0.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryDetailVCCell0.xib; sourceTree = "<group>"; };
+		C823E2FD1DCB67B600793046 /* ArtGalleryDetailVCCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtGalleryDetailVCCell1.h; sourceTree = "<group>"; };
+		C823E2FE1DCB67B600793046 /* ArtGalleryDetailVCCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtGalleryDetailVCCell1.m; sourceTree = "<group>"; };
+		C823E2FF1DCB67B600793046 /* ArtGalleryDetailVCCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtGalleryDetailVCCell1.xib; sourceTree = "<group>"; };
 		C86CCBC21DC4792800D9F280 /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -1151,6 +1186,7 @@
 		364DA59F1D6584F400F6F424 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				C823E2D91DCB226C00793046 /* 艺术馆列表 */,
 				C823E2CA1DCA3E4E00793046 /* 我的 */,
 				C86CCBC01DC4792800D9F280 /* LogIn */,
 				C86CCBBA1DC4786E00D9F280 /* 作品列表 */,
@@ -1483,6 +1519,74 @@
 				C823E2D41DCA3FA500793046 /* MeHeader.h */,
 				C823E2D51DCA3FA500793046 /* MeHeader.m */,
 				C823E2D71DCA3FB000793046 /* MeHeader.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C823E2D91DCB226C00793046 /* 艺术馆列表 */ = {
+			isa = PBXGroup;
+			children = (
+				C823E2DA1DCB226C00793046 /* manager */,
+				C823E2DB1DCB226C00793046 /* model */,
+				C823E2DC1DCB226C00793046 /* other */,
+				C823E2DD1DCB226C00793046 /* vc */,
+				C823E2DE1DCB226C00793046 /* view */,
+			);
+			path = "艺术馆列表";
+			sourceTree = "<group>";
+		};
+		C823E2DA1DCB226C00793046 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		C823E2DB1DCB226C00793046 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C823E2DC1DCB226C00793046 /* other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		C823E2DD1DCB226C00793046 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				C823E2DF1DCB22BC00793046 /* ArtGalleryVC.h */,
+				C823E2E01DCB22BC00793046 /* ArtGalleryVC.m */,
+				C823E2E11DCB22BC00793046 /* ArtGalleryVC.xib */,
+				C823E2E41DCB24D500793046 /* ArtGalleryBaseVC.h */,
+				C823E2E51DCB24D500793046 /* ArtGalleryBaseVC.m */,
+				C823E2E61DCB24D500793046 /* ArtGalleryBaseVC.xib */,
+				C823E2EE1DCB480200793046 /* ArtGalleryDetailVC.h */,
+				C823E2EF1DCB480200793046 /* ArtGalleryDetailVC.m */,
+				C823E2F01DCB480200793046 /* ArtGalleryDetailVC.xib */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		C823E2DE1DCB226C00793046 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C823E2F31DCB48C500793046 /* ArtGalleryDetailHeader.h */,
+				C823E2F41DCB48C500793046 /* ArtGalleryDetailHeader.m */,
+				C823E2E91DCB25CE00793046 /* ArtGalleryBaseVCCell.h */,
+				C823E2EA1DCB25CE00793046 /* ArtGalleryBaseVCCell.m */,
+				C823E2EB1DCB25CE00793046 /* ArtGalleryBaseVCCell.xib */,
+				C823E2F61DCB48E200793046 /* ArtGalleryDetailHeader.xib */,
+				C823E2F81DCB616200793046 /* ArtGalleryDetailVCCell0.h */,
+				C823E2F91DCB616200793046 /* ArtGalleryDetailVCCell0.m */,
+				C823E2FA1DCB616200793046 /* ArtGalleryDetailVCCell0.xib */,
+				C823E2FD1DCB67B600793046 /* ArtGalleryDetailVCCell1.h */,
+				C823E2FE1DCB67B600793046 /* ArtGalleryDetailVCCell1.m */,
+				C823E2FF1DCB67B600793046 /* ArtGalleryDetailVCCell1.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2257,7 +2361,7 @@
 				TargetAttributes = {
 					364DA53A1D65849300F6F424 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6K932EZU4C;
+						DevelopmentTeam = HLSG2BB8JG;
 						ProvisioningStyle = Automatic;
 					};
 					364DA5531D65849300F6F424 = {
@@ -2298,6 +2402,7 @@
 			files = (
 				C86CCC541DC624AA00D9F280 /* HomeHeaderView.xib in Resources */,
 				C86CCC241DC4AE4A00D9F280 /* CommentListVC.xib in Resources */,
+				C823E2F21DCB480200793046 /* ArtGalleryDetailVC.xib in Resources */,
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
 				C86CCBE41DC4792800D9F280 /* Placeholder in Resources */,
 				36111AC11D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -2305,8 +2410,10 @@
 				C86CCC6E1DC624ED00D9F280 /* index_banner2@2x.jpg in Resources */,
 				C86CCC4A1DC50D3F00D9F280 /* ArtListBaseCell.xib in Resources */,
 				C86CCC131DC4A47500D9F280 /* ProductionListVC.xib in Resources */,
+				C823E2E31DCB22BC00793046 /* ArtGalleryVC.xib in Resources */,
 				C81C80911DC87F99007B6259 /* ActualityVC.xib in Resources */,
 				C8187E421DADE5C40083AC86 /* SVProgressHUD.bundle in Resources */,
+				C823E2E81DCB24D500793046 /* ArtGalleryBaseVC.xib in Resources */,
 				C8187E7A1DADE9520083AC86 /* read_me.txt in Resources */,
 				C8187E3F1DADE5C40083AC86 /* LICENSE.txt in Resources */,
 				36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -2322,9 +2429,11 @@
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
 				C86CCBE01DC4792800D9F280 /* Placeholder in Resources */,
 				36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */,
+				C823E2ED1DCB25CE00793046 /* ArtGalleryBaseVCCell.xib in Resources */,
 				C86CCBE31DC4792800D9F280 /* Placeholder in Resources */,
 				36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCC0C1DC49C0900D9F280 /* ProductionDetailHeader.xib in Resources */,
+				C823E2FC1DCB616200793046 /* ArtGalleryDetailVCCell0.xib in Resources */,
 				C86CCBE21DC4792800D9F280 /* Placeholder in Resources */,
 				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCC401DC509D300D9F280 /* ArtListVC.xib in Resources */,
@@ -2358,12 +2467,14 @@
 				36111AC41D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCC811DC74A5700D9F280 /* HomePageHotCollectionCell.xib in Resources */,
 				36111ACF1D6EE58C00A03BF4 /* Placeholder in Resources */,
+				C823E2F71DCB48E200793046 /* ArtGalleryDetailHeader.xib in Resources */,
 				36111AC31D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C823E2D31DCA3E7D00793046 /* MeViewController.xib in Resources */,
 				C86CCC291DC4F27E00D9F280 /* ProductionListCell.xib in Resources */,
 				C86CCC861DC750C300D9F280 /* HomePageSectionView.xib in Resources */,
 				36111AC21D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCBDF1DC4792800D9F280 /* test in Resources */,
+				C823E3011DCB67B600793046 /* ArtGalleryDetailVCCell1.xib in Resources */,
 				C86CCBD91DC4792800D9F280 /* ForgetPwdViewController.xib in Resources */,
 				36111ACC1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */,
@@ -2445,6 +2556,8 @@
 				C86CCCA31DC777FC00D9F280 /* MJFoundation.m in Sources */,
 				C86CCC1A1DC4ABE700D9F280 /* UIView+SGExtension.m in Sources */,
 				364DA6531D6584F400F6F424 /* UIScrollView+MJExtension.m in Sources */,
+				C823E2F11DCB480200793046 /* ArtGalleryDetailVC.m in Sources */,
+				C823E2EC1DCB25CE00793046 /* ArtGalleryBaseVCCell.m in Sources */,
 				C86CCC031DC49BF500D9F280 /* ProductionDetailVC.m in Sources */,
 				C8187EA61DAE030A0083AC86 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				C86CCBDA1DC4792800D9F280 /* LoginViewController.m in Sources */,
@@ -2472,6 +2585,7 @@
 				C8187E991DADF5AE0083AC86 /* WXApiRequestHandler.m in Sources */,
 				C81C80901DC87F99007B6259 /* ActualityVC.m in Sources */,
 				C86CCBE71DC47F4300D9F280 /* AccountService.m in Sources */,
+				C823E2FB1DCB616200793046 /* ArtGalleryDetailVCCell0.m in Sources */,
 				C86CCC761DC6356D00D9F280 /* HomePageCell.m in Sources */,
 				364DA6251D6584F400F6F424 /* UIImage+SPIExtension.m in Sources */,
 				C8187E431DADE5C40083AC86 /* SVProgressHUD.m in Sources */,
@@ -2495,6 +2609,7 @@
 				C876DA541DB0DE8900DCD816 /* IndexCollectionReusableViewHeader.m in Sources */,
 				C86CCC6B1DC624ED00D9F280 /* LBPageControl.m in Sources */,
 				C8187E811DADE9520083AC86 /* UMSocialShareScrollView.m in Sources */,
+				C823E2E71DCB24D500793046 /* ArtGalleryBaseVC.m in Sources */,
 				C86CCCA41DC777FC00D9F280 /* MJProperty.m in Sources */,
 				C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */,
 				C876DA591DB0F40500DCD816 /* PuBuLiuLayout.m in Sources */,
@@ -2524,7 +2639,9 @@
 				C823E2C81DCA2F9F00793046 /* AskAndStudyVCCell.m in Sources */,
 				C86CCBDD1DC4792800D9F280 /* RegisterViewController.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
+				C823E2E21DCB22BC00793046 /* ArtGalleryVC.m in Sources */,
 				C86E12471DAF2D1B0054ABCE /* openssl_wrapper.m in Sources */,
+				C823E3001DCB67B600793046 /* ArtGalleryDetailVCCell1.m in Sources */,
 				C8187E9A1DADF5AE0083AC86 /* WXApiResponseHandler.m in Sources */,
 				C86E12711DAF3E640054ABCE /* PCCircleView.m in Sources */,
 				C86E127E1DAF3EF60054ABCE /* GestureViewController.m in Sources */,
@@ -2543,6 +2660,7 @@
 				C8187E411DADE5C40083AC86 /* SVIndefiniteAnimatedView.m in Sources */,
 				C86CCBF31DC4927C00D9F280 /* ZTDropdownMenu.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
+				C823E2F51DCB48C500793046 /* ArtGalleryDetailHeader.m in Sources */,
 				C86CCC281DC4F27E00D9F280 /* ProductionListCell.m in Sources */,
 				C86CCC6C1DC624ED00D9F280 /* LBKitConst.m in Sources */,
 				C86E12721DAF3E640054ABCE /* PCCircleViewConst.m in Sources */,
@@ -2702,7 +2820,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6K932EZU4C;
+				DEVELOPMENT_TEAM = HLSG2BB8JG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",
@@ -2740,7 +2858,7 @@
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/BasicFramework/Vender/支付宝支付/zfb_pay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.caipiao2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.haowan001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2752,7 +2870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6K932EZU4C;
+				DEVELOPMENT_TEAM = HLSG2BB8JG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",
@@ -2790,7 +2908,7 @@
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/BasicFramework/Vender/支付宝支付/zfb_pay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.caipiao2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.haowan001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
