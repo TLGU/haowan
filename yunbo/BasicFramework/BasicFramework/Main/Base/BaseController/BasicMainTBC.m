@@ -14,6 +14,7 @@
 #import "UIImage+Image.h"
 #import "ZTTabBar.h"
 #import "HomePageVC.h"
+#import "MeViewController.h"
 @interface BasicMainTBC ()<ZTTabBarDelegate>
 
 
@@ -98,7 +99,7 @@
     
     [self addChildViewControllerWithClassname:[UIViewController description]imagename:@"index_13" title:@"关注"];
     
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"me" title:@"我的"];
+    [self addChildViewControllerWithClassname:[MeViewController description] imagename:@"me" title:@"我的"];
     
     
 }
