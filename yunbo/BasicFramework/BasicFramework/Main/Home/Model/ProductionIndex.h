@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Production : NSObject
+@interface ProductionIndex : NSObject
 @property(copy,nonatomic)NSString *id;// = 58159b01d6c4596dd06bf7f9;
 @property(copy,nonatomic)NSString *name;// = "\U4f5c8";
 @property(copy,nonatomic)NSString *pic;// = "attachFiles/20161030/58159b01d6c4596dd06bf7f9/58159b01d6c4596dd06bf7f8";

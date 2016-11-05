@@ -12,6 +12,10 @@
 #import "ProductionListVC.h"
 #import "SGTopTitleView.h"
 #import "CommentListVC.h"
+#import "HotestListVC.h"
+#import "NewestListVC.h"
+#import "GuoHuaListVC.h"
+#import "ShuFaListVC.h"
 @interface ProductionListVC () <PuBuLiuLayoutDelegate,UICollectionViewDelegate,UICollectionViewDataSource,SGTopTitleViewDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) SGTopTitleView *topTitleView;
@@ -89,19 +93,19 @@
     [self addChildViewController:oneVC];
     
     // 电视剧
-    CommentListVC *twoVC = [[CommentListVC alloc] init];
+    HotestListVC *twoVC = [[HotestListVC alloc] init];
     [self addChildViewController:twoVC];
     
     // 电影
-    CommentListVC *threeVC = [[CommentListVC alloc] init];
+    NewestListVC *threeVC = [[NewestListVC alloc] init];
     [self addChildViewController:threeVC];
     
     // 综艺
-    CommentListVC *fourVC = [[CommentListVC alloc] init];
+    GuoHuaListVC *fourVC = [[GuoHuaListVC alloc] init];
     [self addChildViewController:fourVC];
     
     // 综艺
-    CommentListVC *fiveVC = [[CommentListVC alloc] init];
+    ShuFaListVC *fiveVC = [[ShuFaListVC alloc] init];
     [self addChildViewController:fiveVC];
     
 }

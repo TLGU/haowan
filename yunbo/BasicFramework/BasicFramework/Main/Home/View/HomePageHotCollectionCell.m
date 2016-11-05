@@ -34,7 +34,7 @@
 -(void)setHotItem:(HotItem *)hotItem{
     _hotItem=hotItem;
     NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",YGBaseURL,_hotItem.pic]];
-    UIImage *placeHolderImg=[UIImage imageNamed:@"art"];
+    UIImage *placeHolderImg=[UIImage imageNamed:@"kDownloadImageHolder"];
     [self.imgV sd_setImageWithURL:url placeholderImage:placeHolderImg];
     
     

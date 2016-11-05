@@ -11,6 +11,7 @@
 #import "PuBuLiuLayout.h"
 #import "ProductionListCell.h"
 #import "ProductionDetailVC.h"
+#import "Production.h"
 @interface BaseProductionVC ()<UICollectionViewDataSource,UICollectionViewDelegate,PuBuLiuLayoutDelegate>
 
 @end
@@ -20,6 +21,11 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.collectionView];
+    
+
+    
+    
+    
 }
 
 
@@ -32,15 +38,18 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
         layout.padding = 5;
         layout.edgeInsets = UIEdgeInsetsMake(5, 5, 49, 5);
         _collectionView=[[UICollectionView  alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-64-49) collectionViewLayout:layout];
-//        [_collectionView registerNib:[UINib nibWithNibName:@"RootCollectionViewCell" bundle:nil]
-//          forCellWithReuseIdentifier:reuseIdentifierForRootCell];
+
         _collectionView.delegate=self;
         _collectionView.dataSource=self;
         _collectionView.backgroundColor=base_backGround_color;
         _collectionView.contentInset=UIEdgeInsetsMake(44, 0, 0, 0);
         _collectionView.scrollIndicatorInsets=_collectionView.contentInset;
+        [_collectionView registerNib:[UINib nibWithNibName:@"ProductionListCell"
+                                                    bundle:nil] forCellWithReuseIdentifier:ProductionListCellID];
         
-        [_collectionView registerNib:[UINib nibWithNibName:@"ProductionListCell" bundle:nil] forCellWithReuseIdentifier:ProductionListCellID];
+        
+        
+
         
         
         
@@ -70,7 +79,7 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-    return 7;
+    return self.dataArray.count;
     
 }
 
@@ -80,8 +89,8 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
     
     
     ProductionListCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:ProductionListCellID forIndexPath:indexPath];
-    cell.imgV.image=[UIImage imageNamed:[NSString stringWithFormat:@"zuopin%ld",indexPath.row]];
-//    cell.backgroundColor=DMRandColor;
+//    cell.imgV.image=[UIImage imageNamed:[NSString stringWithFormat:@"zuopin%ld",indexPath.row]];
+
     
     return cell;
     
@@ -89,13 +98,16 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
 
 -(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    ProductionListCell *procell =(ProductionListCell*)  cell;
+    Production *production=  self.dataArray[indexPath.row];
+    procell.production=production;
     
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    ProductionDetailVC *vc=[ProductionDetailVC new];
-    vc.rowIndex=indexPath.row;
-    [self.navigationController pushViewController:vc animated:YES];
+//    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+//    ProductionDetailVC *vc=[ProductionDetailVC new];
+//    vc.rowIndex=indexPath.row;
+//    [self.navigationController pushViewController:vc animated:YES];
     
 }
 #pragma mark - layout的代理事件

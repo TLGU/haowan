@@ -14,7 +14,28 @@
 @end
 @implementation ProductionListCell
 
-- (void)awakeFromNib {
+-(void)setProduction:(Production *)production{
+    _production=production;
+    
+    [self.imgV yg_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",YGBaseURL,_production.pic]]
+                 placeholderImage:[UIImage imageNamed:@"kDownloadImageHolder"]
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize)
+    {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+    {
+        
+    }];
+    
+    
+    
+    
+}
+
+
+
+- (void)awakeFromNib
+{
     [super awakeFromNib];
     
     
