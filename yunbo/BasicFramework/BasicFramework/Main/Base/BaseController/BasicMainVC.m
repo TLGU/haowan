@@ -4,6 +4,7 @@
 #import "BasicMainVC.h"
 #import "NHCustomNoNetworkEmptyView.h"
 #import "NHCustomLoadingAnimationView.h"
+#import "Production.h"
 @interface BasicMainVC ()
 @property (nonatomic, weak) NHCustomNoNetworkEmptyView *noNetworkEmptyView;
 @property (nonatomic, weak) NHCustomLoadingAnimationView *animationView;
@@ -15,6 +16,13 @@
         
     }
     return self;
+}
+
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray=[NSMutableArray array];
+    }
+    return _dataArray;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -193,6 +201,108 @@
     
 }
 
-
+-(void )loadDataWithDataType:(DataType)type andId:(NSString *)Id scrollView:(UIScrollView *)view isRefresh:(BOOL)refresh finish:(void(^)(id value))finish
+{
+    
+    NSString *url=@"";
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    
+    if (refresh) {
+        self.pi=0;
+    }
+    params[@"pageSize"]=@"10";
+    params[@"page"]=@(++self.pi);
+    switch (type)
+    {
+        case DataTypeList_Command://推荐作品列表
+        {
+            url=@"front/list_pub.do";
+            params[@"tag_type"]=@"1";//
+        }
+        break;
+        case DataTypeList_Hot://热门作品列表
+        {
+            url=@"front/list_pub.do";
+            params[@"tag_type"]=@"2";//
+        }
+            break;
+        case DataTypeList_GuoHua:////国画作品列表
+        {
+           url=@"front/list_pub.do";
+           params[@"thirdPubConlumnId"]=@"5812ef8078e0802052dd7a31";
+            
+            
+        }
+        break;
+        case DataTypeList_ShuFa:////书法作品列表
+        {
+            params[@"thirdPubConlumnId"]=@"5812ef7878e0802052dd7a30";
+            url=@"front/list_pub.do";
+        }
+            break;
+        case DataTypeList_NewProduction://最新作品列表
+        {
+            url=@"front/list_pub.do";
+            params[@"secondPubConlumnId"]=@"5812ef5478e0802052dd7a2f";
+        }
+            break;
+        case DataTypeDetail://获取作家_作品_新闻_的详情
+        {
+            url=@"front/get_pub.do";
+            params[@"pub_id"]=Id;
+        }
+            break;
+        default:
+            break;
+    }
+    WeakSelf(weakSelf)
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:url parameters:params Controller:nil success:^(id responseObject) {
+        /*停止刷新*/
+        if (view) {
+            [[AppSingle Shared] headerEndRefreshingOnView:view];
+            [[AppSingle Shared] footerEndRefreshingOnView:view];
+        }
+      if (type!=DataTypeDetail) {//作品列表
+          NSArray *arr=   responseObject[@"data"];
+            if (arr.count)
+            {
+                NSMutableArray  *dataArray= [Production mj_objectArrayWithKeyValuesArray:arr];
+                if (weakSelf.pi==1)
+                {
+                    weakSelf.dataArray=dataArray;
+                }
+                else
+                {
+                    [weakSelf.dataArray addObjectsFromArray:dataArray];
+                }
+                if (finish) {
+                    finish(@YES);
+                }
+            }else{
+                if (finish) {
+                    finish(@NO);
+                    NSLog(@"没有更多数据了！")
+                }
+            }
+           
+        }
+        else{//详情
+        
+        }
+       
+       
+    } failure:^(NSError *error) {
+        /*停止刷新*/
+        if (view) {
+            [[AppSingle Shared] headerEndRefreshingOnView:view];
+            [[AppSingle Shared] footerEndRefreshingOnView:view];
+        }
+        if (finish) {
+            finish(@NO);
+        }
+    }];
+    
+    
+}
 
 @end

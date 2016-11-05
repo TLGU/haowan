@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "Production.h"
+#import "ProductionIndex.h"
 
-@implementation Production
+@implementation ProductionIndex
 
 @end

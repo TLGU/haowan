@@ -13,7 +13,7 @@
 #import "ProductionListVC.h"
 #import "ArtListVC.h"
 #import "HomePageSectionView.h"
-#import "Production.h"
+#import "ProductionIndex.h"
 #import "ArtListVC.h"
 @interface HomePageVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *tableView;
@@ -62,7 +62,7 @@ static NSString *HomePageHotCellID=@"HomePageHotCellID";
     [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"front/list_pub.do" parameters:params Controller:self success:^(id responseObject) {
         NSArray *arr=  responseObject[@"data"];
         
-        self.productions=  [Production mj_objectArrayWithKeyValuesArray:arr];
+        self.productions=  [ProductionIndex mj_objectArrayWithKeyValuesArray:arr];
         NSLog(@"%@",arr);
         [weakSelf.tableView reloadData];
         [[AppSingle Shared] headerEndRefreshingOnView:self.tableView];
@@ -161,7 +161,7 @@ static NSString *HomePageHotCellID=@"HomePageHotCellID";
 }
 
 - (void)configureCell:(HomePageCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    Production *production=self.productions[indexPath.row];
+    ProductionIndex *production=self.productions[indexPath.row];
     NSString *imgURL =[NSString stringWithFormat:@"%@%@",YGBaseURL,production.pic] ;
     UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imgURL];
     
@@ -196,7 +196,7 @@ static NSString *HomePageHotCellID=@"HomePageHotCellID";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section!=0) {
 
-        Production *production=self.productions[indexPath.row];
+        ProductionIndex *production=self.productions[indexPath.row];
         NSString *imgURL =[NSString stringWithFormat:@"%@%@",YGBaseURL,production.pic] ;
         
         // 先从缓存中查找图片

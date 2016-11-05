@@ -1,24 +1,24 @@
 //
-//  CommentListVC.m
+//  HotestListVC.m
 //  BasicFramework
 //
-//  Created by 周航 on 16/10/29.
+//  Created by 周航 on 16/11/5.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "CommentListVC.h"
+#import "HotestListVC.h"
 
-@interface CommentListVC ()
+@interface HotestListVC ()
 
 @end
 
-@implementation CommentListVC
+@implementation HotestListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     WeakSelf(weakSelf)
     void (^loadData)(BOOL isRefresh )=^(BOOL isRefresh){
-        [weakSelf loadDataWithDataType:DataTypeList_Command andId:nil scrollView:weakSelf.collectionView isRefresh:isRefresh finish:^(id value) {
+        [weakSelf loadDataWithDataType:DataTypeList_Hot andId:nil scrollView:weakSelf.collectionView isRefresh:isRefresh finish:^(id value) {
             if ([value boolValue]) {
                 [weakSelf.collectionView reloadData];
             }else{

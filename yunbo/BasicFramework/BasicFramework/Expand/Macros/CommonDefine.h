@@ -21,6 +21,24 @@ typedef NS_ENUM(NSUInteger, RequestMethod) {
     
 };
 
+//typedef NS_ENUM(NSUInteger, DataType) {
+//    DataTypeList_Command=1,//推荐作品列表
+//     DataTypeList_Hot=2,//热门作品列表
+//    DataTypeList_GuoHua=3,//国画作品列表
+//    DataTypeList_ShuFa=4,//书法作品列表
+//    DataTypeList_NewProduction=5,//最新作品列表
+//    DataTypeDetail=6//获取作家_作品_新闻_的详情
+//    
+//};
+
+typedef enum : NSUInteger {
+    DataTypeList_Command=0,
+    DataTypeList_Hot,
+    DataTypeList_GuoHua,
+    DataTypeList_ShuFa,
+    DataTypeList_NewProduction,
+    DataTypeDetail
+} DataType;
 
 /**
  *  获取Window

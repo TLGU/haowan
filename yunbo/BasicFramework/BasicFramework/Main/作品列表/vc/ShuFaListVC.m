@@ -1,24 +1,24 @@
 //
-//  CommentListVC.m
+//  ShuFaListVC.m
 //  BasicFramework
 //
-//  Created by 周航 on 16/10/29.
+//  Created by 周航 on 16/11/5.
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 
-#import "CommentListVC.h"
+#import "ShuFaListVC.h"
 
-@interface CommentListVC ()
+@interface ShuFaListVC ()
 
 @end
 
-@implementation CommentListVC
+@implementation ShuFaListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     WeakSelf(weakSelf)
     void (^loadData)(BOOL isRefresh )=^(BOOL isRefresh){
-        [weakSelf loadDataWithDataType:DataTypeList_Command andId:nil scrollView:weakSelf.collectionView isRefresh:isRefresh finish:^(id value) {
+        [weakSelf loadDataWithDataType:DataTypeList_ShuFa andId:nil scrollView:weakSelf.collectionView isRefresh:isRefresh finish:^(id value) {
             if ([value boolValue]) {
                 [weakSelf.collectionView reloadData];
             }else{

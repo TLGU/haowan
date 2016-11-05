@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Production.h"
 @interface ProductionListCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *imgV;
+@property(strong,nonatomic) Production *production;
 @end

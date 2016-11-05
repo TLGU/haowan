@@ -9,6 +9,10 @@
 
 @property(nonatomic,assign)BOOL backBarTextIsBack;
 
+//请求网络数据相关
+@property(strong,nonatomic)NSMutableArray *dataArray;
+@property(assign,nonatomic)NSInteger pi;//请求的页码
+
 -(void)addNotifications;
 - (void)removeKeyboardNotification;
 
@@ -46,7 +50,8 @@
     
     /** 请求数据，交给子类去实现*/
 - (void)loadData;
-    
-    @property (nonatomic, assign) BOOL isNetworkReachable;
-    
+
+-(void )loadDataWithDataType:(DataType)type andId:(NSString *)Id scrollView:(UIScrollView *)view isRefresh:(BOOL)refresh finish:(void(^)(id value))finish;
+
+@property (nonatomic, assign) BOOL isNetworkReachable;
 @end
