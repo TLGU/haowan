@@ -16,4 +16,5 @@
     @property(nonatomic,assign)CGFloat bottom;
 @property(strong,nonatomic)UIViewController* activityViewController;
 - (UIViewController *)getCurrentVC;
++ (CGSize)sizeForNoticeTitle:(NSString*)text font:(UIFont*)font;
 @end

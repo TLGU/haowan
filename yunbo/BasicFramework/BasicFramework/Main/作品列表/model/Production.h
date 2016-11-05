@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Artist;
+#import "Artist.h"
 @interface Production : NSObject
 /*艺术家*/
 @property(strong,nonatomic)Artist *artist;

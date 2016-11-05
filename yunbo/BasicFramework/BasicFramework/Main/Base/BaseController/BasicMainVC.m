@@ -246,7 +246,19 @@
             params[@"secondPubConlumnId"]=@"5812ef5478e0802052dd7a2f";
         }
             break;
-        case DataTypeDetail://获取作家_作品_新闻_的详情
+        case DataTypeDetail_Production://获取作品的详情
+        {
+            url=@"front/get_pub.do";
+            params[@"pub_id"]=Id;
+        }
+            break;
+        case DataTypeDetail_Artist://获取作家的详情
+        {
+            url=@"front/get_pub.do";
+            params[@"pub_id"]=Id;
+        }
+            break;
+        case DataTypeDetail_News://获取新闻的详情
         {
             url=@"front/get_pub.do";
             params[@"pub_id"]=Id;
@@ -262,7 +274,7 @@
             [[AppSingle Shared] headerEndRefreshingOnView:view];
             [[AppSingle Shared] footerEndRefreshingOnView:view];
         }
-      if (type!=DataTypeDetail) {//作品列表
+      if (type!=DataTypeDetail_Production&&type!=DataTypeDetail_Artist&&type!=DataTypeDetail_News) {//作品列表
           NSArray *arr=   responseObject[@"data"];
             if (arr.count)
             {
@@ -287,7 +299,20 @@
            
         }
         else{//详情
-        
+            if (type==DataTypeDetail_Production) {//作品详情
+                NSLog(@"%@",responseObject);
+                
+               NSDictionary *dic= responseObject[@"data"];
+                Production *production=   [Production mj_objectWithKeyValues:dic];
+                
+                if (finish) {
+                    finish(production);
+                }
+            }else if(type==DataTypeDetail_Artist) {//作家详情
+                 NSLog(@"%@",responseObject);
+            }else if(type==DataTypeDetail_News) {//新闻详情
+                 NSLog(@"%@",responseObject);
+            }
         }
        
        
@@ -304,5 +329,8 @@
     
     
 }
+
+
+
 
 @end

@@ -166,6 +166,10 @@ static NetWorkManager *network = nil;
     if ([urlStr isEqualToString:@"front/list_pub.do"]) {
         return YES;
     }
+    if ([urlStr isEqualToString:@"front/get_pub.do"]) {
+        return YES;
+    }
+    
    
     
     return NO;

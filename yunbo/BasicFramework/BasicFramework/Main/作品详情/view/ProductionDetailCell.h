@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Production.h"
 @interface ProductionDetailCell : UITableViewCell
-
+@property(strong,nonatomic)Production *production;
 @end

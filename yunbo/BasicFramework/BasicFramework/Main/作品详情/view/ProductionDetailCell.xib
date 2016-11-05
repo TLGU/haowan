@@ -16,43 +16,54 @@
                 <frame key="frameInset" width="320" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxj-8V-EuW">
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   作品描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzA-As-ir8">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-n8-2oG">
                         <color key="backgroundColor" red="0.85882352941176465" green="0.85490196078431369" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FzA-As-ir8" firstAttribute="top" secondItem="nxj-8V-EuW" secondAttribute="top" constant="10" id="497-kJ-1OU"/>
-                            <constraint firstAttribute="trailing" secondItem="FzA-As-ir8" secondAttribute="trailing" id="6rL-a0-4UX"/>
-                            <constraint firstAttribute="bottom" secondItem="FzA-As-ir8" secondAttribute="bottom" constant="1" id="AqZ-CB-bnH"/>
-                            <constraint firstAttribute="height" constant="40" id="beD-a0-cxt"/>
-                            <constraint firstItem="FzA-As-ir8" firstAttribute="leading" secondItem="nxj-8V-EuW" secondAttribute="leading" id="iZM-DU-x9a"/>
+                            <constraint firstAttribute="height" constant="15" id="wQr-ST-TJ3"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-WF-E0T">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作品描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhS-cN-YfN">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="93g-na-HzT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-9Z-ZXG">
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的中国人对于中式怀庆的喜爱应该是渗透在骨子里的</string>
-                        <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <string key="text">李明，前大连实德俱乐部队员，先后代表大连万达和大连实德俱乐部夺得7个甲级联赛与1个超级联赛冠军，迄今李明代表国家队出场141场，是代表中国国家队出场最多的球员，代表国家队比赛12年，2005年10月31日，李明退役日期确定，11月20日进行的足协杯决赛将是李明职业生涯最后一场比赛[1]  。后曾担任大连阿尔滨足球俱乐部总经理一职，现代理主帅担任新一届U-19男足国家队主教练。</string>
+                        <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-Dh-ugs">
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.85490196078431369" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FWX-9e-R3K"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="QGb-WF-E0T" secondAttribute="bottom" constant="8" id="1vg-XB-WSG"/>
-                    <constraint firstItem="nxj-8V-EuW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="FJE-S2-fJj"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="QGb-WF-E0T" secondAttribute="trailing" constant="8" id="KpV-7e-xGF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="nxj-8V-EuW" secondAttribute="trailing" constant="-8" id="MDJ-9c-0W0"/>
-                    <constraint firstItem="nxj-8V-EuW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Uwi-II-4VN"/>
-                    <constraint firstItem="QGb-WF-E0T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="lVi-kq-JuB"/>
-                    <constraint firstItem="QGb-WF-E0T" firstAttribute="top" secondItem="nxj-8V-EuW" secondAttribute="bottom" constant="8" id="ys3-Cm-yZT"/>
+                    <constraint firstItem="hJ8-Dh-ugs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="0vl-bq-Pyy"/>
+                    <constraint firstItem="yEd-9Z-ZXG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7ro-xK-yFH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nhS-cN-YfN" secondAttribute="trailing" id="CMf-RF-m8Y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6Dh-n8-2oG" secondAttribute="trailing" constant="-8" id="PUd-z1-tjI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yEd-9Z-ZXG" secondAttribute="bottom" id="ZT1-Fs-4Ee"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hJ8-Dh-ugs" secondAttribute="trailing" constant="3" id="dk7-5S-lVq"/>
+                    <constraint firstItem="6Dh-n8-2oG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="eZu-Rj-teE"/>
+                    <constraint firstItem="yEd-9Z-ZXG" firstAttribute="top" secondItem="nhS-cN-YfN" secondAttribute="bottom" constant="2" id="fxc-2t-GcV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yEd-9Z-ZXG" secondAttribute="trailing" id="jZS-O1-Srf"/>
+                    <constraint firstItem="6Dh-n8-2oG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="n3Z-S3-ngv"/>
+                    <constraint firstItem="hJ8-Dh-ugs" firstAttribute="top" secondItem="nhS-cN-YfN" secondAttribute="bottom" id="nuN-kd-fsx"/>
+                    <constraint firstItem="nhS-cN-YfN" firstAttribute="top" secondItem="6Dh-n8-2oG" secondAttribute="bottom" id="tVO-VF-aHw"/>
+                    <constraint firstItem="nhS-cN-YfN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="y0E-75-ESl"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="8" y="-9.5"/>
+            <connections>
+                <outlet property="contentTextView" destination="yEd-9Z-ZXG" id="VkK-xZ-X60"/>
+            </connections>
+            <point key="canvasLocation" x="-711" y="-680"/>
         </tableViewCell>
     </objects>
 </document>

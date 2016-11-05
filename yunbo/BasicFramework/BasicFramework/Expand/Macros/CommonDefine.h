@@ -37,7 +37,10 @@ typedef enum : NSUInteger {
     DataTypeList_GuoHua,
     DataTypeList_ShuFa,
     DataTypeList_NewProduction,
-    DataTypeDetail
+    DataTypeDetail_Production,//作品详情
+    DataTypeDetail_Artist,//作家详情
+    DataTypeDetail_News//新闻详情
+    
 } DataType;
 
 /**

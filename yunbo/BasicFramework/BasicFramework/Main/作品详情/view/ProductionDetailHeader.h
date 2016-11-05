@@ -8,12 +8,36 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductionDetailHeader : UIView
+@protocol ProductionDetailHeaderDelegate <NSObject>
+
+-(void)popAction:(id)sender;
+
+@end
+
+@interface ProductionDetailHeader : UIView<UICollectionViewDelegate,UICollectionViewDataSource>
 +(instancetype)header;
 @property(assign,nonatomic)NSInteger rowIndex;
+
+@property(weak,nonatomic)id<ProductionDetailHeaderDelegate> delegate;
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgV;
 
 @property (strong, nonatomic) IBOutlet UIImageView *header;
+
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *artistIntroLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *productionNameLabel;
+
+
+@property (strong, nonatomic) IBOutlet UIView *bianQianView;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *fujiaInfoLabel;
+
+
+
 @end
