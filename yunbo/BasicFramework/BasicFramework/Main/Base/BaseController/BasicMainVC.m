@@ -293,7 +293,7 @@
             }else{
                 if (finish) {
                     finish(@NO);
-                    NSLog(@"没有更多数据了！")
+                    NSLog(@"没有更多数据了！");
                 }
             }
            

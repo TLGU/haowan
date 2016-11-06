@@ -74,7 +74,6 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
          _tableView.sectionFooterHeight=0.1;
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         
-//        [self.view addSubview:_tableView];
         _tableView.showsVerticalScrollIndicator=NO;
         
     }
@@ -96,24 +95,25 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self.view addSubview:self.tableView];
     self.title=@"作品详情";
     _headerView.rowIndex=self.rowIndex;
     
     [self.view addSubview:self.tableView];
-//    
-//    WS(weakSelf)
-//    
-//    [[AppSingle Shared] addHeaderPullOnView:weakSelf.tableView waitTime:0 action:^{
-//        [weakSelf loadDataWithDataType:DataTypeDetail_Production andId:_production.ID scrollView:weakSelf.tableView isRefresh:YES finish:^(id value) {
-//            if ([value isKindOfClass:[Production class]]) {
-//                weakSelf.production=value;
-//                [weakSelf.tableView reloadData];
-//            }
-//        }];
-//    }];
-//    
-//    [[AppSingle Shared] headerBeginRefreshing:self.tableView];
+   
+    WS(weakSelf)
+    
+    [[AppSingle Shared] addHeaderPullOnView:weakSelf.tableView waitTime:0 action:^{
+        [weakSelf loadDataWithDataType:DataTypeDetail_Production andId:_production.ID scrollView:weakSelf.tableView isRefresh:YES finish:^(id value) {
+            if ([value isKindOfClass:[Production class]]) {
+                weakSelf.production=value;
+                [weakSelf.tableView reloadData];
+                weakSelf.headerView.production=weakSelf.production;
+                
+            }
+        }];
+    }];
+    
+    [[AppSingle Shared] headerBeginRefreshing:self.tableView];
     
     
     
@@ -135,7 +135,6 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
          return 1;
     }else{
         return 2;
-//         return self.production.comment_list.count;
     }
    
    
@@ -144,17 +143,19 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section==0) {
-        // NSData from the Base64 encoded str
+    if (indexPath.section==0)
+    {
        
         ProductionDetailCell *cell=  [tableView dequeueReusableCellWithIdentifier:ProductionDetailCellID forIndexPath:indexPath];
         cell.production=self.production;
         return cell;
         
+    }
+    else
+    {
         
-    }else{
         ProductionDetailCommentCell *cell=  [tableView dequeueReusableCellWithIdentifier:ProductionDetailCommentCellID forIndexPath:indexPath];
-        
+        cell.production=self.production;
         return cell;
     }
    
@@ -166,25 +167,25 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0) {
-        // NSData from the Base64 encoded str
-//        if (_production.intro) {
-//            NSData *nsdataFromBase64String = [[NSData alloc]
-//                                              initWithBase64EncodedString:_production.intro options:0];
-//            
-//            // Decoded NSString from the NSData
-//            NSString *base64Decoded = [[NSString alloc]
-//                                       initWithData:nsdataFromBase64String encoding:NSUTF8StringEncoding];
-//            
-//            
-//            
-//            CGSize size= [UIView sizeForNoticeTitle:base64Decoded font:[UIFont systemFontOfSize:13]];
-//            return size.height+50;
-//        }else{
-//            return 60;
-//        }
+    if (indexPath.section==0)
+    {
         
-        return 200;
+        
+        if (self.production.intro) {
+            // NSData from the Base64 encoded str
+            NSData *nsdataFromBase64String = [[NSData alloc]
+                                              initWithBase64EncodedString:_production.intro options:0];
+            
+            // Decoded NSString from the NSData
+            NSString *base64Decoded = [[NSString alloc]
+                                       initWithData:nsdataFromBase64String encoding:NSUTF8StringEncoding];
+            
+          CGSize size=  [UIView sizeForNoticeTitle:base64Decoded font:[UIFont systemFontOfSize:14.0f]];
+            return size.height+65;
+        }else{
+            return 65;
+        }
+        
         
     }else{
         

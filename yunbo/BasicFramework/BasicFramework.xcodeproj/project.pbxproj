@@ -1230,6 +1230,7 @@
 		364DA59F1D6584F400F6F424 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				C823E3331DCF6DC300793046 /* 发布  */,
 				C823E2D91DCB226C00793046 /* 艺术馆列表 */,
 				C823E2CA1DCA3E4E00793046 /* 我的 */,
 				C86CCBC01DC4792800D9F280 /* LogIn */,
@@ -1631,6 +1632,53 @@
 				C823E2FD1DCB67B600793046 /* ArtGalleryDetailVCCell1.h */,
 				C823E2FE1DCB67B600793046 /* ArtGalleryDetailVCCell1.m */,
 				C823E2FF1DCB67B600793046 /* ArtGalleryDetailVCCell1.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C823E3331DCF6DC300793046 /* 发布  */ = {
+			isa = PBXGroup;
+			children = (
+				C823E3341DCF6DC300793046 /* manager */,
+				C823E3351DCF6DC400793046 /* model */,
+				C823E3361DCF6DC400793046 /* others */,
+				C823E3371DCF6DC400793046 /* vc */,
+				C823E3381DCF6DC400793046 /* view */,
+			);
+			path = "发布 ";
+			sourceTree = "<group>";
+		};
+		C823E3341DCF6DC300793046 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		C823E3351DCF6DC400793046 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C823E3361DCF6DC400793046 /* others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = others;
+			sourceTree = "<group>";
+		};
+		C823E3371DCF6DC400793046 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		C823E3381DCF6DC400793046 /* view */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2432,7 +2480,7 @@
 				TargetAttributes = {
 					364DA53A1D65849300F6F424 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6K932EZU4C;
+						DevelopmentTeam = HLSG2BB8JG;
 						ProvisioningStyle = Automatic;
 					};
 					364DA5531D65849300F6F424 = {
@@ -2908,7 +2956,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6K932EZU4C;
+				DEVELOPMENT_TEAM = HLSG2BB8JG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",
@@ -2958,7 +3006,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6K932EZU4C;
+				DEVELOPMENT_TEAM = HLSG2BB8JG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BasicFramework/Vender/NSCoding",
