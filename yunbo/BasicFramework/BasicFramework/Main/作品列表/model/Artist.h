@@ -19,4 +19,7 @@
 @property(strong,nonatomic)NSNumber *    shoucang_count;
 @property(strong,nonatomic)NSNumber *    state;
 @property(strong,nonatomic)NSNumber *    viewcount;
+@property(copy,nonatomic)NSString *touxian;
+
+@property(copy,nonatomic)NSString *zhiwei;
 @end

@@ -48,6 +48,9 @@
 //    self.layer.shadowRadius = 3;//阴影半径，默认3
     
     
+    self.textView.userInteractionEnabled=NO;
+    self.textView.scrollEnabled=NO;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

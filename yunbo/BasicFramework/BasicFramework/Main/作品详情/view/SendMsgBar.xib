@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Guf-Th-vYU" customClass="SendMsgBar">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzU-tU-qWe">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mcs-hA-HXT"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="说点啥吧～" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5q-iL-hCC">
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIP-pK-ruY">
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="sendAction:" destination="Guf-Th-vYU" eventType="touchUpInside" id="oFX-UN-3qg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dIP-pK-ruY" secondAttribute="trailing" constant="10" id="6rh-Tw-JYG"/>
+                <constraint firstItem="dIP-pK-ruY" firstAttribute="leading" secondItem="x5q-iL-hCC" secondAttribute="trailing" constant="10" id="An5-HU-XD2"/>
+                <constraint firstItem="x5q-iL-hCC" firstAttribute="top" secondItem="EzU-tU-qWe" secondAttribute="bottom" constant="2" id="CLU-uL-Wfx"/>
+                <constraint firstItem="EzU-tU-qWe" firstAttribute="top" secondItem="Guf-Th-vYU" secondAttribute="top" constant="1" id="D4j-3s-Zhk"/>
+                <constraint firstItem="dIP-pK-ruY" firstAttribute="top" secondItem="EzU-tU-qWe" secondAttribute="bottom" constant="3" id="VOW-by-FPD"/>
+                <constraint firstItem="EzU-tU-qWe" firstAttribute="leading" secondItem="Guf-Th-vYU" secondAttribute="leading" id="aaF-ZQ-VGU"/>
+                <constraint firstAttribute="trailing" secondItem="EzU-tU-qWe" secondAttribute="trailing" id="fc3-Ih-JsT"/>
+                <constraint firstItem="x5q-iL-hCC" firstAttribute="leading" secondItem="Guf-Th-vYU" secondAttribute="leading" constant="10" id="qBv-gI-bbJ"/>
+                <constraint firstItem="dIP-pK-ruY" firstAttribute="width" secondItem="x5q-iL-hCC" secondAttribute="width" multiplier="1:4" id="qq7-Ao-rSu"/>
+                <constraint firstAttribute="bottom" secondItem="dIP-pK-ruY" secondAttribute="bottom" constant="3" id="rXv-aR-zfH"/>
+                <constraint firstAttribute="bottom" secondItem="x5q-iL-hCC" secondAttribute="bottom" constant="3" id="rwT-hm-j00"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sendBtn" destination="dIP-pK-ruY" id="kar-6P-q3E"/>
+                <outlet property="textField" destination="x5q-iL-hCC" id="51j-BH-Zb7"/>
+            </connections>
+            <point key="canvasLocation" x="-571" y="-647"/>
+        </view>
+    </objects>
+</document>

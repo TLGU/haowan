@@ -8,8 +8,9 @@
 
 #import "ArtBaseListVC.h"
 #import "ArtListBaseCell.h"
+#import "ArtistDetailVC.h"
 @interface ArtBaseListVC ()<UITableViewDelegate,UITableViewDataSource>
-@property(strong,nonatomic)UITableView *tableView;
+
 @end
 
 @implementation ArtBaseListVC
@@ -17,6 +18,11 @@ static NSString *ArtListBaseCellID=@"ArtListBaseCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    
+ 
+    
+    
+   
 }
 -(UITableView *)tableView{
     if (!_tableView) {
@@ -58,6 +64,12 @@ static NSString *ArtListBaseCellID=@"ArtListBaseCellID";
     return (kScreenHeight-64-44)/3.0f;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ArtistDetailVC *vc=[ArtistDetailVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 @end

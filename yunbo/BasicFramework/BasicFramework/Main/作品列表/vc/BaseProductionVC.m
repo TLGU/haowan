@@ -47,12 +47,6 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
         [_collectionView registerNib:[UINib nibWithNibName:@"ProductionListCell"
                                                     bundle:nil] forCellWithReuseIdentifier:ProductionListCellID];
         
-        
-        
-
-        
-        
-        
     }
     return _collectionView;
 }
@@ -89,7 +83,7 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
     
     
     ProductionListCell *cell =   [collectionView dequeueReusableCellWithReuseIdentifier:ProductionListCellID forIndexPath:indexPath];
-//    cell.imgV.image=[UIImage imageNamed:[NSString stringWithFormat:@"zuopin%ld",indexPath.row]];
+
 
     
     return cell;
@@ -103,18 +97,27 @@ static NSString *reuseIdentifierForRootCell=@"reuseIdentifierRootViewController"
     procell.production=production;
     
 }
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-//    ProductionDetailVC *vc=[ProductionDetailVC new];
-//    vc.rowIndex=indexPath.row;
-//    [self.navigationController pushViewController:vc animated:YES];
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    ProductionDetailVC *vc=[ProductionDetailVC new];
+   
+    Production *production=  self.dataArray[indexPath.row];
+    vc.production=production;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
     
 }
 #pragma mark - layout的代理事件
 
 - (CGFloat)puBuLiuLayoutHeightForItemAtIndex:(NSIndexPath *)index
 {
-    return arc4random_uniform(80) + 300;
+    Production *production=  self.dataArray[index.row];
+    CGFloat height= [production.pic_height floatValue]*(kScreenWidth/[production.pic_width floatValue]);
+    
+    return height ;
 }
 
 

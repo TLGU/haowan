@@ -9,5 +9,5 @@
 #import "BasicMainVC.h"
 
 @interface ArtBaseListVC : BasicMainVC
-
+@property(strong,nonatomic)UITableView *tableView;
 @end

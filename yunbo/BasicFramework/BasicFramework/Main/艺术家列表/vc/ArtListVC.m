@@ -9,6 +9,12 @@
 #import "ArtListVC.h"
 #import "SGTopTitleView.h"
 #import "ArtBaseListVC.h"
+#import "Artist_CommentListVC.h"
+#import "Artist_HotListVC.h"
+#import "Artist_NewsListVC.h"
+#import "Artist_ShuFaListVC.h"
+#import "Artist_ShuHuaListVC.h"
+
 @interface ArtListVC ()<SGTopTitleViewDelegate,UIScrollViewDelegate>
 @property(strong,nonatomic)NSArray *titles;
 @property(strong,nonatomic)SGTopTitleView *topTitleView;
@@ -25,7 +31,7 @@
     
     self.title=@"艺术家列表";
     
-    self.titles = @[@"推荐", @"热门", @"最新", @"书法家",@"书画"];
+    self.titles = @[@"推荐", @"热门", @"最新", @"书法家",@"画家"];
     // , @"NBA", @"新闻", @"娱乐", @"音乐", @"网络电影"
     self.topTitleView = [SGTopTitleView topTitleViewWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     _topTitleView.staticTitleArr = [NSArray arrayWithArray:_titles];
@@ -49,7 +55,7 @@
     _mainScrollView.delegate = self;
     [self.view addSubview:_mainScrollView];
     
-    ArtBaseListVC *oneVC = [[ArtBaseListVC alloc] init];
+    Artist_CommentListVC *oneVC = [[Artist_CommentListVC alloc] init];
     [self.mainScrollView addSubview:oneVC.view];
     [self addChildViewController:oneVC];
     
@@ -75,23 +81,23 @@
 // 添加所有子控制器
 - (void)setupChildViewController {
     // 精选
-    ArtBaseListVC *oneVC = [[ArtBaseListVC alloc] init];
+    Artist_CommentListVC *oneVC = [[Artist_CommentListVC alloc] init];
     [self addChildViewController:oneVC];
     
     // 电视剧
-    ArtBaseListVC *twoVC = [[ArtBaseListVC alloc] init];
+    Artist_HotListVC *twoVC = [[Artist_HotListVC alloc] init];
     [self addChildViewController:twoVC];
     
     // 电影
-    ArtBaseListVC *threeVC = [[ArtBaseListVC alloc] init];
+    Artist_NewsListVC *threeVC = [[Artist_NewsListVC alloc] init];
     [self addChildViewController:threeVC];
     
     // 综艺
-    ArtBaseListVC *fourVC = [[ArtBaseListVC alloc] init];
+    Artist_ShuFaListVC *fourVC = [[Artist_ShuFaListVC alloc] init];
     [self addChildViewController:fourVC];
     
     // 综艺
-    ArtBaseListVC *fiveVC = [[ArtBaseListVC alloc] init];
+    Artist_ShuHuaListVC *fiveVC = [[Artist_ShuHuaListVC alloc] init];
     [self addChildViewController:fiveVC];
     
 }

@@ -143,7 +143,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FX-E2A">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">黄原 别名海儒，汉族，四川广汉人，1922年生。幼承庭训喜习书画，1953年毕业于成都艺术专科学校，后在重庆西南美术专科学校及四川美术学院任教。书法初学赵孟頫、何绍基，后写《始平公造像记》《爨龙颜碑》，取共雄浑质朴之笔意融入行草，所作笔墨凝练，韵致醇雅。作品多次入选国内外重大书法展览，被收入《中国古今书法选》《当代楹联墨迹选》《全国老书家十人作品选》《鸿飞集》《名人入琼书法选集》等，在《书法》《书法家》等报刊发表，为纪念馆、风景名胜区收藏或被刻石。著有《学书览概》等。亦擅国画。现为中国书法家协会会员，中国美术家协会会员，四川书法家协会常务理事兼评委，四川……</mutableString>
+                                <string key="text">黄原 别名海儒，汉族，四川广汉人，1922年生。幼承庭训喜习书画，1953年毕业于成都艺术专科学校，后在重庆西南美术专科学校及四川美术学院任教。书法初学赵孟頫、何绍基，后写《始平公造像记》《爨龙颜碑》，取共雄浑质朴之笔意融入行草，所作笔墨凝练，韵致醇雅。作品多次入选国内外重大书法展览，被收入《中国古今书法选》《当代楹联墨迹选》《全国老书家十人作品选》《鸿飞集》《名人入琼书法选集》等，在《书法》《书法家》等报刊发表，为纪念馆、风景名胜区收藏或被刻石。著有《学书览概》等。亦擅国画。现为中国书法家协会会员，中国美术家协会会员，四川书法家协会常务理事兼评委，四川……</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -178,6 +178,7 @@
                 <outlet property="backImgV" destination="VpO-P1-hKk" id="hER-ht-Bgz"/>
                 <outlet property="baseBackView" destination="32z-9A-2WM" id="ztD-n0-632"/>
                 <outlet property="imgV" destination="Wsq-LZ-eN6" id="AXD-wt-bBB"/>
+                <outlet property="textView" destination="hJt-FX-E2A" id="v5u-od-Kbx"/>
             </connections>
             <point key="canvasLocation" x="-120.5" y="-235.5"/>
         </tableViewCell>

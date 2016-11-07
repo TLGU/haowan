@@ -13,5 +13,13 @@
 +(instancetype)header{
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
+- (IBAction)backAction:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(backAction:)]) {
+        [self.delegate backAction:sender];
+        
+        
+    }
+    
+}
 
 @end

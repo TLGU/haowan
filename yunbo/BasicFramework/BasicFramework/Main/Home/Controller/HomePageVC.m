@@ -15,6 +15,7 @@
 #import "HomePageSectionView.h"
 #import "ProductionIndex.h"
 #import "ArtListVC.h"
+#import "ProductionDetailVC.h"
 @interface HomePageVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)HomeHeaderView *header;
@@ -248,19 +249,19 @@ static NSString *HomePageHotCellID=@"HomePageHotCellID";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.section!=0)
-//    {
-//        ProductionListVC *vc=[ProductionListVC new];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }else{
-//        ArtListVC *vc=[ArtListVC new];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }
-//    else
-//    {
-//        ArtListVC *vc=[ArtListVC new];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }
+    if (indexPath.section==1) {
+        ProductionDetailVC *vc=[ProductionDetailVC new];
+        
+        ProductionIndex *productionIndex=  self.productions[indexPath.row];
+        Production *production=[Production new];
+        production.ID=productionIndex.id;
+        vc.production=production;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    
+
     
 }
 #pragma mark--

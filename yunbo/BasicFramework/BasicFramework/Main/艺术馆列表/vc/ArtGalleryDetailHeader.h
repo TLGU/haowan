@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol ArtGalleryDetailHeaderDelegate <NSObject>
+
+-(void)backAction:(id)sender;
+
+@end
+
 @interface ArtGalleryDetailHeader : UIView
 +(instancetype)header;
+@property(weak,nonatomic)id<ArtGalleryDetailHeaderDelegate> delegate;
 @end

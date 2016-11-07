@@ -11,7 +11,8 @@ typedef NS_ENUM(NSInteger, NetworkResponseStatus) {
     NetworkResponseStatusWatingPay=201,//等待付款
     NetworkResponseStatusWatingSendGoods=202,//等待发货
     NetworkResponseStatusRefunded=204,//已退款
-    NetworkResponseStatusTransactionClosed=205//交易关闭
+    NetworkResponseStatusTransactionClosed=205,//交易关闭
+    NetworkResponseStatusTransactionNotLogin=301//未登录
 };
 
 
@@ -37,7 +38,12 @@ typedef enum : NSUInteger {
     DataTypeList_GuoHua,
     DataTypeList_ShuFa,
     DataTypeList_NewProduction,
-    DataTypeDetail
+    DataTypeDetail_Production,//作品详情
+    DataTypeDetail_Artist,//作家详情
+    DataTypeDetail_News,//新闻详情
+    DataTypeList_Artist//作家列表
+    
+    
 } DataType;
 
 /**

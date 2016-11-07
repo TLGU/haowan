@@ -7,7 +7,16 @@
 //
 
 #import "BasicMainVC.h"
-
+#import "Production.h"
 @interface ProductionDetailVC : BasicMainVC
 @property(assign,nonatomic)NSInteger rowIndex;
+
+@property(strong,nonatomic)Production *production;
+
+
+
+
+
+
+
 @end

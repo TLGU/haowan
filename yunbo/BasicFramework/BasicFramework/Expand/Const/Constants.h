@@ -12,5 +12,5 @@
 //邮件接收人
 static NSString* const kMail_cc_ToRecipients_Address=@"mobileproject@126.com";
 
-
+#define kDownloadImageHolder @"kDownloadImageHolder"
 #endif /* Constants_h */

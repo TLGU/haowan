@@ -88,44 +88,44 @@
 
 
 - (void)dealloc {
-     [kNotificationCenter removeObserver:self];
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [kNotificationCenter removeObserver:self];
+    //    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-    
+
 - (void)pop {
     if (self.navigationController == nil) return ;
     [self.navigationController popViewControllerAnimated:YES];
 }
-    
+
 - (void)popToRootVc {
     if (self.navigationController == nil) return ;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-    
+
 - (void)popToVc:(UIViewController *)vc {
     if ([vc isKindOfClass:[UIViewController class]] == NO) return ;
     if (self.navigationController == nil) return ;
     [self.navigationController popToViewController:vc animated:YES];
 }
-    
+
 - (void)dismiss {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-    
+
 - (void)dismissWithCompletion:(void(^)())completion {
     [self dismissViewControllerAnimated:YES completion:completion];
 }
-    
+
 - (void)presentVc:(UIViewController *)vc {
     if ([vc isKindOfClass:[UIViewController class]] == NO) return ;
     [self presentVc:vc completion:nil];
 }
-    
+
 - (void)presentVc:(UIViewController *)vc completion:(void (^)(void))completion {
     if ([vc isKindOfClass:[UIViewController class]] == NO) return ;
     [self presentViewController:vc animated:YES completion:completion];
 }
-    
+
 - (void)pushVc:(UIViewController *)vc {
     if ([vc isKindOfClass:[UIViewController class]] == NO) return ;
     if (self.navigationController == nil) return ;
@@ -134,7 +134,7 @@
     }
     [self.navigationController pushViewController:vc animated:YES];
 }
-    
+
 - (void)removeChildVc:(UIViewController *)childVc {
     if ([childVc isKindOfClass:[UIViewController class]] == NO) {
         return ;
@@ -143,7 +143,7 @@
     [childVc willMoveToParentViewController:nil];
     [childVc removeFromParentViewController];
 }
-    
+
 - (void)addChildVc:(UIViewController *)childVc {
     if ([childVc isKindOfClass:[UIViewController class]] == NO) {
         return ;
@@ -153,7 +153,7 @@
     [self.view addSubview:childVc.view];
     childVc.view.frame = self.view.bounds;
 }
-    
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
     
@@ -178,19 +178,19 @@
     }
     return _noNetworkEmptyView;
 }
-    
+
 - (void)showLoadingAnimation {
     NHCustomLoadingAnimationView *animation = [[NHCustomLoadingAnimationView alloc] init];
     [animation showInView:self.view];
     _animationView = animation;
     [self.view bringSubviewToFront:animation];
 }
-    
+
 - (void)hideLoadingAnimation {
     [_animationView dismiss];
     _animationView = nil;
 }
-    
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [self.view bringSubviewToFront:self.animationView];
@@ -219,7 +219,7 @@
             url=@"front/list_pub.do";
             params[@"tag_type"]=@"1";//
         }
-        break;
+            break;
         case DataTypeList_Hot://热门作品列表
         {
             url=@"front/list_pub.do";
@@ -228,12 +228,12 @@
             break;
         case DataTypeList_GuoHua:////国画作品列表
         {
-           url=@"front/list_pub.do";
-           params[@"thirdPubConlumnId"]=@"5812ef8078e0802052dd7a31";
+            url=@"front/list_pub.do";
+            params[@"thirdPubConlumnId"]=@"5812ef8078e0802052dd7a31";
             
             
         }
-        break;
+            break;
         case DataTypeList_ShuFa:////书法作品列表
         {
             params[@"thirdPubConlumnId"]=@"5812ef7878e0802052dd7a30";
@@ -246,24 +246,73 @@
             params[@"secondPubConlumnId"]=@"5812ef5478e0802052dd7a2f";
         }
             break;
-        case DataTypeDetail://获取作家_作品_新闻_的详情
+        case DataTypeDetail_Production://获取作品的详情
         {
             url=@"front/get_pub.do";
             params[@"pub_id"]=Id;
         }
             break;
+        case DataTypeDetail_Artist://获取作家的详情
+        {
+            url=@"front/get_pub.do";
+            params[@"pub_id"]=Id;
+        }
+            break;
+        case DataTypeDetail_News://获取新闻的详情
+        {
+            url=@"front/get_pub.do";
+            params[@"pub_id"]=Id;
+        }
+            break;
+        case DataTypeList_Artist://获取作家列表
+        {
+            url=@"front/list_pub.do";
+            params[@"secondPubConlumnId"]=@"581407b20e9f110d8cbbdb94";
+            
+            if ([Id isEqualToString:@"推荐"]) {
+                params[@"tag_type"]=@"1";
+            }
+            if ([Id isEqualToString:@"热门"]) {
+                params[@"tag_type"]=@"2";
+            }
+            if ([Id isEqualToString:@"最新"]) {
+                params[@"tag_string"]=@"最新";
+            }
+            if ([Id isEqualToString:@"书法家"]) {
+                params[@"tag_string"]=@"书法家";
+            }
+            if ([Id isEqualToString:@"画家"]) {
+                params[@"tag_string"]=@"画家";
+            }
+            
+            
+        }
+            break;
+            //
         default:
             break;
     }
     WeakSelf(weakSelf)
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:url parameters:params Controller:nil success:^(id responseObject) {
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:url parameters:params Controller:nil success:^(id responseObject)
+    {
         /*停止刷新*/
         if (view) {
             [[AppSingle Shared] headerEndRefreshingOnView:view];
             [[AppSingle Shared] footerEndRefreshingOnView:view];
         }
-      if (type!=DataTypeDetail) {//作品列表
-          NSArray *arr=   responseObject[@"data"];
+        //        DataTypeList_Command=0,
+        //        DataTypeList_Hot,
+        //        DataTypeList_GuoHua,
+        //        DataTypeList_ShuFa,
+        //        DataTypeList_NewProduction,
+        //
+        if (type==DataTypeList_Command||
+            type==DataTypeList_Hot||
+            type==DataTypeList_GuoHua||
+            type==DataTypeList_ShuFa||
+            type==DataTypeList_NewProduction)
+        {//作品列表
+            NSArray *arr=   responseObject[@"data"];
             if (arr.count)
             {
                 NSMutableArray  *dataArray= [Production mj_objectArrayWithKeyValuesArray:arr];
@@ -281,17 +330,68 @@
             }else{
                 if (finish) {
                     finish(@NO);
-                    NSLog(@"没有更多数据了！")
+                    NSLog(@"没有更多数据了！");
                 }
             }
-           
+            
         }
-        else{//详情
+        
+        if (type==DataTypeDetail_Production)
+        {//作品详情
+            NSLog(@"%@",responseObject);
+            
+            NSDictionary *dic= responseObject[@"data"];
+            Production *production=   [Production mj_objectWithKeyValues:dic];
+            
+            if (finish) {
+                finish(production);
+            }
+        }else if(type==DataTypeDetail_Artist) {//作家详情
+            NSLog(@"%@",responseObject);
+        }else if(type==DataTypeDetail_News) {//新闻详情
+            NSLog(@"%@",responseObject);
+        }
+        if (type==DataTypeList_Artist) {//作家列表
+             NSArray *arr=   responseObject[@"data"];
+            
+           
+            
+            
+            
+            if (arr.count)
+            {
+                NSMutableArray  *dataArray= [Artist  mj_objectArrayWithKeyValuesArray:arr];
+                if (weakSelf.pi==1)
+                {
+                    weakSelf.dataArray=dataArray;
+                }
+                else
+                {
+                    [weakSelf.dataArray addObjectsFromArray:dataArray];
+                }
+                if (finish) {
+                    finish(@YES);
+                }
+            }else{
+                if (finish) {
+                    finish(@NO);
+                    NSLog(@"没有更多数据了！");
+                }
+            }
+            
+            
+            
         
         }
-       
-       
-    } failure:^(NSError *error) {
+        
+        
+        
+        
+        
+        
+    }
+    failure:^(NSError *error)
+    {
         /*停止刷新*/
         if (view) {
             [[AppSingle Shared] headerEndRefreshingOnView:view];
@@ -304,5 +404,8 @@
     
     
 }
+
+
+
 
 @end
