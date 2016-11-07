@@ -27,11 +27,27 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.headerBtn setCornerRad:30];
-//    self.selectionStyle=UITableViewCellSelectionStyleNone;
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
 
 }
 
-- (IBAction)goodAction:(UIButton *)sender {
+- (IBAction)goodAction:(UIButton *)sender
+{
+    
+    
+    WeakSelf(weakSelf)
+    NSMutableDictionary *mdic= [NSMutableDictionary dictionary];
+    mdic[@"comment_id"]=self.commenter.comment_id;
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"face/user/nice_comment.do" parameters:mdic Controller:nil success:^(id responseObject) {
+        [SVProgressHUD showSuccessWithStatus:@"点赞成功"];
+      NSInteger count=  [weakSelf.goodBtn.titleLabel.text integerValue];
+        [weakSelf.goodBtn setTitle:[NSString stringWithFormat:@"%ld",count] forState:UIControlStateNormal];
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+    
     
     
 }

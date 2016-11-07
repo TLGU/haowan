@@ -128,7 +128,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-vZ-btG">
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title="关注" image="detail_add">
+                                                    <state key="normal" title="收藏" image="detail_add">
                                                         <color key="titleColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
@@ -282,7 +282,7 @@
                 <outlet property="timeBtn" destination="A5w-14-dnE" id="R3K-u2-Bin"/>
                 <outlet property="yanBtn" destination="tVV-MI-RQN" id="JZT-9r-FJv"/>
             </connections>
-            <point key="canvasLocation" x="-1315" y="-1166"/>
+            <point key="canvasLocation" x="-1526" y="-1316"/>
         </view>
     </objects>
     <resources>

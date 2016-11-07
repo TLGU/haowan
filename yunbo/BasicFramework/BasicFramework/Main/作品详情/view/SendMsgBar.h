@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol SendMsgBarDelegate <NSObject>
+
+-(void)sendMsg:(NSString *)msg sender:(id)sender;
+
+@end
+
 @interface SendMsgBar : UIView
 @property (strong, nonatomic) IBOutlet UIButton *sendBtn;
 +(instancetype)bar;
+@property(weak,nonatomic)id<SendMsgBarDelegate> delegate;
 @end

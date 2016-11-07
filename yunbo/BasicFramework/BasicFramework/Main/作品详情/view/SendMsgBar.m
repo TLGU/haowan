@@ -8,6 +8,12 @@
 
 #import "SendMsgBar.h"
 
+@interface SendMsgBar ()
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+
+@end
+
+
 @implementation SendMsgBar
 
 /*
@@ -37,5 +43,18 @@
     
     
 }
+
+- (IBAction)sendAction:(id)sender {
+    
+    if (self.textField.text.length<1) {
+        return;
+    }
+    if ([self.delegate respondsToSelector:@selector(sendMsg:sender:)]) {
+        [self.delegate sendMsg:self.textField.text sender:self.textField];
+    }
+}
+
+
+
 
 @end

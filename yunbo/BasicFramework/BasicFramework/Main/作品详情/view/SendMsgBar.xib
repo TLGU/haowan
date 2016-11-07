@@ -29,6 +29,9 @@
                     <state key="normal" title="发送">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendAction:" destination="Guf-Th-vYU" eventType="touchUpInside" id="oFX-UN-3qg"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,8 +51,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="sendBtn" destination="dIP-pK-ruY" id="kar-6P-q3E"/>
+                <outlet property="textField" destination="x5q-iL-hCC" id="51j-BH-Zb7"/>
             </connections>
-            <point key="canvasLocation" x="-485" y="-505.5"/>
+            <point key="canvasLocation" x="-571" y="-647"/>
         </view>
     </objects>
 </document>

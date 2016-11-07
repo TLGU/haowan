@@ -72,9 +72,11 @@ static NSString *ArtistCellID=@"ArtistCellID";
 //    face/user/nice_pub.do
     NSMutableDictionary *params= [NSMutableDictionary dictionary];
     params[@"pub_id"]=self.production.ID;
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"face/user/nice_pub.do" parameters:nil Controller:nil success:^(id responseObject)
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"face/user/nice_pub.do" parameters:params Controller:nil success:^(id responseObject)
     {
-        [SVProgressHUD showSuccessWithStatus:@""];
+        [SVProgressHUD showSuccessWithStatus:@"点赞成功"];
+        
+        
     } failure:^(NSError *error) {
         
     }];
@@ -84,9 +86,22 @@ static NSString *ArtistCellID=@"ArtistCellID";
     
     
     
+    
+    
+    
 }
 - (IBAction)guanzhuAction:(id)sender {
     
+    NSMutableDictionary *params= [NSMutableDictionary dictionary];
+    params[@"pub_id"]=self.production.ID;
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"face/user/shoucang_pub.do" parameters:params Controller:nil success:^(id responseObject)
+     {
+         [SVProgressHUD showSuccessWithStatus:@"收藏成功"];
+         
+         
+     } failure:^(NSError *error) {
+         
+     }];
     
 }
 - (IBAction)songLiAction:(id)sender {

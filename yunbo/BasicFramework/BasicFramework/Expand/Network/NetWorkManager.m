@@ -174,26 +174,65 @@ static NetWorkManager *network = nil;
     
     return NO;
 }
+//特殊的接口
+-(BOOL)isOhterUrl:(NSString *)url
+{
+    
+    if ([url isEqualToString:@"front/get_pub.do"])
+    {
+        return YES;
+    }
+    return NO;
+}
 
+
+//需要登录的接口
+-(BOOL)isLoginUrl:(NSString *)url
+{
+//
+    if ([url isEqualToString:@"face/user/nice_pub.do"])
+    {
+        return YES;
+    }
+//    if ([url isEqualToString:@"face/user/shoucang_pub.do"])
+//    {
+//        return YES;
+//    }
+    return NO;
+}
 
 
 -(void)requestWithMethod:(RequestMethod)method Url:(NSString*)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
    
-    if (![self isNotLoginUrl:URL]) {
-        parameters=  [self constructParams:parameters];
+   
+    
+    NSString *name= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (name.length)//登录之后的参数拼接
+    {
+        if ([self isNotLoginUrl:URL]) {//登录之后请求了不需要登录的接口
+           
+        }else if ([self isOhterUrl:URL]){//登录之后请求了特殊的接口
+             parameters=  [self constructParams:parameters];
+        }else /*if ([self isLoginUrl:URL])*/{//登录之后请求了需要登录的接口
+             parameters=  [self constructParams2:parameters];
+        }
+        
+        
+    }
+    else//未登录的参数拼接
+    {
+        if ([self isNotLoginUrl:URL]) {//未登录之后请求了不需要登录的接口
+            
+        }else if ([self isOhterUrl:URL]){//未登录之后请求了特殊的接口
+//            parameters=  [self constructParams:parameters];
+        }else{//未登录之后请求了需要登录的接口
+//            parameters=  [self constructParams2:parameters];
+        }
     }
     
-    NSString *key= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
-    if (key.length&&[URL isEqualToString:@"front/get_pub.do"])
-    {
-         parameters=  [self constructParams:parameters];
-        
-        
-        
-        
-    }
+    
     
     
     URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
@@ -234,9 +273,15 @@ static NetWorkManager *network = nil;
              if (statusCode!=NetworkResponseStatusSuccess) {
                  [SVProgressHUD showErrorWithStatus:message?message:@"未知错误!"];
                  if (failure) {
-                     NSError *err=[NSError errorWithDomain:message code:statusCode userInfo:nil];
-                     failure(err);
+                     if (statusCode==NetworkResponseStatusTransactionNotLogin) {
+                         [[NSNotificationCenter defaultCenter ] postNotificationName:LoginStatus_Changed object:nil];
+                     }else{
+                         NSError *err=[NSError errorWithDomain:message code:statusCode userInfo:nil];
+                         failure(err);
+                     }
+                     
                  }
+                 
              }else{
                  if (success) {
                      success(responseObject);
@@ -389,7 +434,72 @@ static UIViewController *tempVC = nil;
     [APPSINGLE DeleteValueInMyLocalStoreForKey:KEY_USER_ID];
     [APPSINGLE DeleteValueInMyLocalStoreForKey:kReachability];
 }
-
+//将NSString转换成十六进制的字符串则可使用如下方式:
+- (NSString *)convertStringToHexStr:(NSString *)str {
+    if (!str || [str length] == 0) {
+        return @"";
+    }
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSMutableString *string = [[NSMutableString alloc] initWithCapacity:[data length]];
+    
+    [data enumerateByteRangesUsingBlock:^(const void *bytes, NSRange byteRange, BOOL *stop) {
+        unsigned char *dataBytes = (unsigned char*)bytes;
+        for (NSInteger i = 0; i < byteRange.length; i++) {
+            NSString *hexStr = [NSString stringWithFormat:@"%x", (dataBytes[i]) & 0xff];
+            if ([hexStr length] == 2) {
+                [string appendString:hexStr];
+            } else {
+                [string appendFormat:@"0%@", hexStr];
+            }
+        }
+    }];
+    
+    return string;
+}
+-(NSDictionary *)constructParams2:(NSMutableDictionary*)sender
+{
+    
+   
+   /* name		用户登录名
+    randCode	随机码(可取当前时间戳)
+    encrpt		enAes(固定)
+    sign_only	true(固定)
+    mode		1(xml)/2(json)
+    data		具体的报文(json格式或xml格式 必须urlencode)
+    mac			具体的签名/签名规则是
+    */
+    NSString *randCode =  [self ret32bitString];
+    NSString *name     =  [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    NSString *key     =  [[NSUserDefaults standardUserDefaults] objectForKey:user_key_key];
+    NSString *data     =  [self dictionaryToJson:sender];
+    NSString *tempKeyTemp= [NSString stringWithFormat:@"%@%@",key,randCode];
+    NSString * tempKey =   [MD5Encryption  md5by32:tempKeyTemp];
+    NSString *hexName  =[self convertStringToHexStr:name];
+    NSString *macTemp= [NSString stringWithFormat:@"%@%@%@",tempKey,hexName,data];
+    NSString *mac      =  [MD5Encryption  md5by32:macTemp];
+    NSMutableDictionary *dic=[NSMutableDictionary dictionary];
+    dic[@"name"]      = name;
+    dic[@"randCode"]  =  randCode;
+    dic[@"encrpt"]    =  @"enAes";
+    dic[@"sign_only"] =  @"true";
+    dic[@"mode"]      =  @"2";
+    dic[@"data"]      =  data;
+    dic[@"mac"]       =  mac;
+    
+    /*
+    String key = "用户登录后服务器返回的密钥";
+    * 	String tempKey =  MD5Normal(key+randCode);标准md5方法 结果小写
+    *  String mac = Md5Util.MD5Normal(tempKey+ StringToHex(name)+ data);
+    */
+    
+    
+    
+    
+    return dic;
+    
+   
+}
 //构建传递参数
 
 -(NSDictionary *)constructParams:(NSMutableDictionary*)sender

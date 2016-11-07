@@ -95,10 +95,13 @@
          [SVProgressHUD showSuccessWithStatus:@"注册成功."];
          
          NSString *key= [responseObject objectForKey:@"key"];
+         NSString *name= [responseObject objectForKey:@"name"];
          
-         
-         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
-         
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_key_key];
+         if (!name) {
+             name=phone;
+         }
+         [[NSUserDefaults standardUserDefaults] setObject:name forKey:user_name_key];
          [[NSUserDefaults standardUserDefaults] synchronize];
          
          if (sucessBlock)
@@ -149,10 +152,13 @@
          [SVProgressHUD showSuccessWithStatus:message];
          
          NSString *key= [responseObject objectForKey:@"key"];
+         NSString *name= [responseObject objectForKey:@"name"];
          
-         
-         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
-         
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_key_key];
+         if (!name) {
+             name=third_user_id;
+         }
+         [[NSUserDefaults standardUserDefaults] setObject:name forKey:user_name_key];
          [[NSUserDefaults standardUserDefaults] synchronize];
          
          if (sucessBlock)
@@ -206,9 +212,14 @@
          
          NSString *key= [responseObject objectForKey:@"key"];
          
+         NSString *name= [responseObject objectForKey:@"name"];
          
-         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
+         if (!name) {
+             name=userName;
+         }
          
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_key_key];
+         [[NSUserDefaults standardUserDefaults] setObject:name forKey:user_name_key];
          [[NSUserDefaults standardUserDefaults] synchronize];
          
          if (sucessBlock)
@@ -257,10 +268,13 @@
          [SVProgressHUD showSuccessWithStatus:@"重置成功."];
          
          NSString *key= [responseObject objectForKey:@"key"];
+         NSString *name= [responseObject objectForKey:@"name"];
          
-         
-         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
-         
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_key_key];
+         if (!name) {
+             name=phone;
+         }
+         [[NSUserDefaults standardUserDefaults] setObject:name forKey:user_name_key];
          [[NSUserDefaults standardUserDefaults] synchronize];
          
          if (sucessBlock)

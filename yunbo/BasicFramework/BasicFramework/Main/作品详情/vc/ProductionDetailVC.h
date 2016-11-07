@@ -12,4 +12,11 @@
 @property(assign,nonatomic)NSInteger rowIndex;
 
 @property(strong,nonatomic)Production *production;
+
+
+
+
+
+
+
 @end

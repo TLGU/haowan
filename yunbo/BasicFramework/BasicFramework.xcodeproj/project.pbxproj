@@ -153,6 +153,16 @@
 		C826FB781DD06EBF00030632 /* JianJieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB761DD06EBF00030632 /* JianJieCell.xib */; };
 		C826FB7C1DD06FC400030632 /* ZuoPingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB7A1DD06FC400030632 /* ZuoPingCell.m */; };
 		C826FB7D1DD06FC400030632 /* ZuoPingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB7B1DD06FC400030632 /* ZuoPingCell.xib */; };
+		C826FB811DD0C63F00030632 /* Artist_CommentListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB7F1DD0C63F00030632 /* Artist_CommentListVC.m */; };
+		C826FB821DD0C63F00030632 /* Artist_CommentListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB801DD0C63F00030632 /* Artist_CommentListVC.xib */; };
+		C826FB861DD0C65C00030632 /* Artist_HotListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB841DD0C65C00030632 /* Artist_HotListVC.m */; };
+		C826FB871DD0C65C00030632 /* Artist_HotListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB851DD0C65C00030632 /* Artist_HotListVC.xib */; };
+		C826FB8B1DD0C67100030632 /* Artist_NewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB891DD0C67100030632 /* Artist_NewsListVC.m */; };
+		C826FB8C1DD0C67100030632 /* Artist_NewsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB8A1DD0C67100030632 /* Artist_NewsListVC.xib */; };
+		C826FB901DD0C69600030632 /* Artist_ShuFaListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB8E1DD0C69600030632 /* Artist_ShuFaListVC.m */; };
+		C826FB911DD0C69600030632 /* Artist_ShuFaListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB8F1DD0C69600030632 /* Artist_ShuFaListVC.xib */; };
+		C826FB951DD0C6AA00030632 /* Artist_ShuHuaListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB931DD0C6AA00030632 /* Artist_ShuHuaListVC.m */; };
+		C826FB961DD0C6AA00030632 /* Artist_ShuHuaListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB941DD0C6AA00030632 /* Artist_ShuHuaListVC.xib */; };
 		C86CCBD81DC4792800D9F280 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */; };
 		C86CCBD91DC4792800D9F280 /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */; };
 		C86CCBDA1DC4792800D9F280 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC61DC4792800D9F280 /* LoginViewController.m */; };
@@ -541,6 +551,21 @@
 		C826FB791DD06FC400030632 /* ZuoPingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuoPingCell.h; sourceTree = "<group>"; };
 		C826FB7A1DD06FC400030632 /* ZuoPingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuoPingCell.m; sourceTree = "<group>"; };
 		C826FB7B1DD06FC400030632 /* ZuoPingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZuoPingCell.xib; sourceTree = "<group>"; };
+		C826FB7E1DD0C63F00030632 /* Artist_CommentListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist_CommentListVC.h; sourceTree = "<group>"; };
+		C826FB7F1DD0C63F00030632 /* Artist_CommentListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist_CommentListVC.m; sourceTree = "<group>"; };
+		C826FB801DD0C63F00030632 /* Artist_CommentListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Artist_CommentListVC.xib; sourceTree = "<group>"; };
+		C826FB831DD0C65C00030632 /* Artist_HotListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist_HotListVC.h; sourceTree = "<group>"; };
+		C826FB841DD0C65C00030632 /* Artist_HotListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist_HotListVC.m; sourceTree = "<group>"; };
+		C826FB851DD0C65C00030632 /* Artist_HotListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Artist_HotListVC.xib; sourceTree = "<group>"; };
+		C826FB881DD0C67100030632 /* Artist_NewsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist_NewsListVC.h; sourceTree = "<group>"; };
+		C826FB891DD0C67100030632 /* Artist_NewsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist_NewsListVC.m; sourceTree = "<group>"; };
+		C826FB8A1DD0C67100030632 /* Artist_NewsListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Artist_NewsListVC.xib; sourceTree = "<group>"; };
+		C826FB8D1DD0C69600030632 /* Artist_ShuFaListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist_ShuFaListVC.h; sourceTree = "<group>"; };
+		C826FB8E1DD0C69600030632 /* Artist_ShuFaListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist_ShuFaListVC.m; sourceTree = "<group>"; };
+		C826FB8F1DD0C69600030632 /* Artist_ShuFaListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Artist_ShuFaListVC.xib; sourceTree = "<group>"; };
+		C826FB921DD0C6AA00030632 /* Artist_ShuHuaListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist_ShuHuaListVC.h; sourceTree = "<group>"; };
+		C826FB931DD0C6AA00030632 /* Artist_ShuHuaListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist_ShuHuaListVC.m; sourceTree = "<group>"; };
+		C826FB941DD0C6AA00030632 /* Artist_ShuHuaListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Artist_ShuHuaListVC.xib; sourceTree = "<group>"; };
 		C86CCBC21DC4792800D9F280 /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -2037,6 +2062,21 @@
 				C86CCC411DC50C5700D9F280 /* ArtBaseListVC.h */,
 				C86CCC421DC50C5700D9F280 /* ArtBaseListVC.m */,
 				C86CCC431DC50C5700D9F280 /* ArtBaseListVC.xib */,
+				C826FB7E1DD0C63F00030632 /* Artist_CommentListVC.h */,
+				C826FB7F1DD0C63F00030632 /* Artist_CommentListVC.m */,
+				C826FB801DD0C63F00030632 /* Artist_CommentListVC.xib */,
+				C826FB831DD0C65C00030632 /* Artist_HotListVC.h */,
+				C826FB841DD0C65C00030632 /* Artist_HotListVC.m */,
+				C826FB851DD0C65C00030632 /* Artist_HotListVC.xib */,
+				C826FB881DD0C67100030632 /* Artist_NewsListVC.h */,
+				C826FB891DD0C67100030632 /* Artist_NewsListVC.m */,
+				C826FB8A1DD0C67100030632 /* Artist_NewsListVC.xib */,
+				C826FB8D1DD0C69600030632 /* Artist_ShuFaListVC.h */,
+				C826FB8E1DD0C69600030632 /* Artist_ShuFaListVC.m */,
+				C826FB8F1DD0C69600030632 /* Artist_ShuFaListVC.xib */,
+				C826FB921DD0C6AA00030632 /* Artist_ShuHuaListVC.h */,
+				C826FB931DD0C6AA00030632 /* Artist_ShuHuaListVC.m */,
+				C826FB941DD0C6AA00030632 /* Artist_ShuHuaListVC.xib */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -2615,9 +2655,12 @@
 				C81C80911DC87F99007B6259 /* ActualityVC.xib in Resources */,
 				C823E3191DCD89AA00793046 /* NewestListVC.xib in Resources */,
 				C8187E421DADE5C40083AC86 /* SVProgressHUD.bundle in Resources */,
+				C826FB821DD0C63F00030632 /* Artist_CommentListVC.xib in Resources */,
 				C823E2E81DCB24D500793046 /* ArtGalleryBaseVC.xib in Resources */,
 				C8187E7A1DADE9520083AC86 /* read_me.txt in Resources */,
+				C826FB871DD0C65C00030632 /* Artist_HotListVC.xib in Resources */,
 				C8187E3F1DADE5C40083AC86 /* LICENSE.txt in Resources */,
+				C826FB911DD0C69600030632 /* Artist_ShuFaListVC.xib in Resources */,
 				36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C81C808C1DC86E49007B6259 /* ArtisticVC.xib in Resources */,
 				C86CCC6F1DC624ED00D9F280 /* index_banner3@2x.jpg in Resources */,
@@ -2638,9 +2681,11 @@
 				36111AD01D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCC0C1DC49C0900D9F280 /* ProductionDetailHeader.xib in Resources */,
 				C823E2FC1DCB616200793046 /* ArtGalleryDetailVCCell0.xib in Resources */,
+				C826FB961DD0C6AA00030632 /* Artist_ShuHuaListVC.xib in Resources */,
 				C86CCBE21DC4792800D9F280 /* Placeholder in Resources */,
 				36111AC51D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C823E31E1DCD89DF00793046 /* GuoHuaListVC.xib in Resources */,
+				C826FB8C1DD0C67100030632 /* Artist_NewsListVC.xib in Resources */,
 				C86CCC401DC509D300D9F280 /* ArtListVC.xib in Resources */,
 				36111ACD1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C81C80961DC88084007B6259 /* ActualityVCCell.xib in Resources */,
@@ -2794,6 +2839,7 @@
 				C823E3271DCDD3F100793046 /* ProductionDetailCommentCell.m in Sources */,
 				C823E3181DCD89AA00793046 /* NewestListVC.m in Sources */,
 				364DA6511D6584F400F6F424 /* MJRefreshFooterView.m in Sources */,
+				C826FB901DD0C69600030632 /* Artist_ShuFaListVC.m in Sources */,
 				364DA61E1D6584F400F6F424 /* NSString+LBKJExtenison.m in Sources */,
 				C8187E991DADF5AE0083AC86 /* WXApiRequestHandler.m in Sources */,
 				C81C80901DC87F99007B6259 /* ActualityVC.m in Sources */,
@@ -2830,10 +2876,12 @@
 				C86E128E1DAF87220054ABCE /* MD5Encryption.m in Sources */,
 				C876DA591DB0F40500DCD816 /* PuBuLiuLayout.m in Sources */,
 				C823E2C31DCA10AE00793046 /* AskAndStudyVC.m in Sources */,
+				C826FB951DD0C6AA00030632 /* Artist_ShuHuaListVC.m in Sources */,
 				C8187E401DADE5C40083AC86 /* README.md in Sources */,
 				C86E12411DAF2D1B0054ABCE /* Order.m in Sources */,
 				C823E3041DCD6C8800793046 /* Production.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
+				C826FB811DD0C63F00030632 /* Artist_CommentListVC.m in Sources */,
 				C86CCCA91DC777FC00D9F280 /* NSObject+MJKeyValue.m in Sources */,
 				C86CCC441DC50C5700D9F280 /* ArtBaseListVC.m in Sources */,
 				C8187EA01DADF7420083AC86 /* DataMD5.m in Sources */,
@@ -2881,6 +2929,7 @@
 				C823E3221DCD8A0E00793046 /* ShuFaListVC.m in Sources */,
 				C8A99CE31D969F4D00633A0D /* YSLScrollMenuView.m in Sources */,
 				C8187E411DADE5C40083AC86 /* SVIndefiniteAnimatedView.m in Sources */,
+				C826FB861DD0C65C00030632 /* Artist_HotListVC.m in Sources */,
 				C86CCBF31DC4927C00D9F280 /* ZTDropdownMenu.m in Sources */,
 				C826FB771DD06EBF00030632 /* JianJieCell.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
@@ -2904,6 +2953,7 @@
 				C826FB7C1DD06FC400030632 /* ZuoPingCell.m in Sources */,
 				C823E2D21DCA3E7D00793046 /* MeViewController.m in Sources */,
 				C86CCBD81DC4792800D9F280 /* ForgetPwdViewController.m in Sources */,
+				C826FB8B1DD0C67100030632 /* Artist_NewsListVC.m in Sources */,
 				C86E12431DAF2D1B0054ABCE /* DataSigner.m in Sources */,
 				C8A99CE21D969F4D00633A0D /* YSLContainerViewController.m in Sources */,
 				C86CCCAE1DC787D700D9F280 /* ProductionIndex.m in Sources */,

@@ -32,16 +32,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BasicFramework/Main/&#x4f5c;&#x54c1;&#x8be6;&#x60c5;/vc/ProductionDetailVC.m"
-            timestampString = "500205279.89719"
+            filePath = "BasicFramework/Main/Base/BaseController/BasicMainVC.m"
+            timestampString = "500222460.664725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "-loadDataWithDataType:andId:scrollView:isRefresh:finish:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

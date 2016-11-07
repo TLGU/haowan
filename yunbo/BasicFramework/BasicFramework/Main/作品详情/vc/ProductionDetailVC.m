@@ -14,7 +14,7 @@
 #import "SendMsgBar.h"
 #import "ArtistDetailVC.h"
 #import "Commenter.h"
-@interface ProductionDetailVC ()<UITableViewDelegate,UITableViewDataSource,ProductionDetailHeaderDelegate>
+@interface ProductionDetailVC ()<UITableViewDelegate,UITableViewDataSource,ProductionDetailHeaderDelegate,SendMsgBarDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)ProductionDetailHeader *headerView;
 
@@ -29,6 +29,8 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     if (!_sendBar) {
         _sendBar=[SendMsgBar bar];
         [_sendBar setFrame:CGRectMake(0, kScreenHeight-44, kScreenWidth, 44)];
+        
+        _sendBar.delegate=self;
     }
     return _sendBar;
 }
@@ -80,6 +82,31 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     }
     return _tableView  ;
 }
+#pragma mark--
+#pragma mark--SendMsgBarDelegate
+-(void)sendMsg:(NSString *)msg sender:(id)sender
+{
+    UITextField *textField= (UITextField *)sender;
+    NSMutableDictionary *mdic=[NSMutableDictionary dictionary];
+    mdic[@"pub_id"]=self.production.ID;
+    mdic[@"content"]=msg;
+    WeakSelf(weakSelf)
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"face/user/comment_pub.do" parameters:mdic Controller:self success:^(id responseObject) {
+        [SVProgressHUD showSuccessWithStatus:@"评论成功"];
+        textField.text=@"";
+        [textField resignFirstResponder];
+        [[AppSingle Shared] headerBeginRefreshing:weakSelf.tableView];
+        if (self.production.comment_list.count) {
+            NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:1];
+            [weakSelf.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        }
+       
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
 
 #pragma mark--
 #pragma mark--life cycle
@@ -143,7 +170,10 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     {
          return 1;
     }else{
-        return self.production.comment_list.count;
+        
+             return self.production.comment_list.count;
+        
+       
     }
    
    
@@ -233,6 +263,7 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section==1) {
         UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 50)];
+        view.backgroundColor=[UIColor whiteColor];
         UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(10, 15, kScreenWidth-20, 35)];
         [view addSubview:label];
         label.textColor=[UIColor blackColor];
@@ -246,7 +277,7 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
           return view;
     }
    
-    return 0;
+    return nil;
     
   
 }
