@@ -7,7 +7,7 @@
 //
 
 #import "BasicMainVC.h"
-
+#import "Artist.h"
 @interface ArtistDetailVC : BasicMainVC
-
+@property(strong,nonatomic)Artist *artist;
 @end

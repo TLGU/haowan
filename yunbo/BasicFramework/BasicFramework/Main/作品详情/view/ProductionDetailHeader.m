@@ -10,7 +10,7 @@
 #import "ArtistCell.h"
 #import "BasicMainTBC.h"
 #define itemW 60
-@interface ProductionDetailHeader ()
+@interface ProductionDetailHeader ()<ArtistCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *yanBtn;
 
@@ -45,25 +45,17 @@ static NSString *ArtistCellID=@"ArtistCellID";
     
     self.productionNameLabel.text=_production.name;
     
-    
-    
     self.fujiaInfoLabel.text=[NSString stringWithFormat:@"%@/%@",_production.cicun,_production.years];
-    
-   CGFloat price= [_production.price_fen floatValue]/100.0f;
+    CGFloat price= [_production.price_fen floatValue]/100.0f;
     self.moneyLabel.text=[NSString stringWithFormat:@"¥ %.2f",price];
-    
-    
-    
-    
     [self.yanBtn setTitle:[NSString stringWithFormat:@"%@",_production.viewcount] forState:UIControlStateNormal];
-    
-    
-    
     [self.timeBtn setTitle:[NSString stringWithFormat:@"%@",_production.showTime] forState:UIControlStateNormal];
     
     
     
     
+    
+    [self.collectionView reloadData];
     
     
     
@@ -90,6 +82,8 @@ static NSString *ArtistCellID=@"ArtistCellID";
     
     
     
+    
+    
 }
 - (IBAction)guanzhuAction:(id)sender {
     
@@ -111,7 +105,11 @@ static NSString *ArtistCellID=@"ArtistCellID";
 }
 
 
-
+-(void)touchHeaderAction:(id)sender{
+    if (self.delegate) {
+        [self.delegate touchheaderAction:sender];
+    }
+}
 -(void)awakeFromNib
 {
     [super awakeFromNib];
@@ -160,7 +158,7 @@ static NSString *ArtistCellID=@"ArtistCellID";
     Artist *artist= self.production.user_see_jsonArray[indexPath.row];
     
     ArtistCell *cell=  [collectionView dequeueReusableCellWithReuseIdentifier:ArtistCellID forIndexPath:indexPath];
-    
+    cell.delegate=self;
     cell.artist=artist;
     
     return cell;

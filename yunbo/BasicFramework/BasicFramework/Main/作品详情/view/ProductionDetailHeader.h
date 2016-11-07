@@ -12,6 +12,9 @@
 
 -(void)popAction:(id)sender;
 
+-(void)touchheaderAction:(id)sender;
+
+
 @end
 
 @interface ProductionDetailHeader : UIView<UICollectionViewDelegate,UICollectionViewDataSource>

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Production.h"
+#import "Commenter.h"
 @interface ProductionDetailCommentCell : UITableViewCell
 @property(strong,nonatomic)Production *production;
+@property(strong,nonatomic) Commenter *commenter;
 @end

@@ -12,7 +12,8 @@
 #import "CustomTransition.h"
 #import "ProductionDetailCommentCell.h"
 #import "SendMsgBar.h"
-
+#import "ArtistDetailVC.h"
+#import "Commenter.h"
 @interface ProductionDetailVC ()<UITableViewDelegate,UITableViewDataSource,ProductionDetailHeaderDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)ProductionDetailHeader *headerView;
@@ -121,8 +122,16 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     
     
 }
+#pragma mark--
+#pragma mark--ProductionDetailHeaderDelegate
+
 -(void)popAction:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)touchheaderAction:(id)sender{
+    ArtistDetailVC *vc=[ArtistDetailVC new];
+    vc.artist=(Artist*)sender;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark--
 #pragma mark--UITableViewDataSource
@@ -134,7 +143,7 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     {
          return 1;
     }else{
-        return 2;
+        return self.production.comment_list.count;
     }
    
    
@@ -155,7 +164,9 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
     {
         
         ProductionDetailCommentCell *cell=  [tableView dequeueReusableCellWithIdentifier:ProductionDetailCommentCellID forIndexPath:indexPath];
-        cell.production=self.production;
+//        cell.production=self.production;
+       Commenter *commenter= self.production.comment_list[indexPath.row];
+        cell.commenter=commenter;
         return cell;
     }
    
@@ -189,7 +200,23 @@ static NSString *ProductionDetailCommentCellID=@"ProductionDetailCommentCellID";
         
     }else{
         
-         return 120;
+        
+        Commenter *commenter=  self.production.comment_list[indexPath.row];
+        if (commenter.content) {
+            // NSData from the Base64 encoded str
+            NSData *nsdataFromBase64String = [[NSData alloc]
+                                              initWithBase64EncodedString:commenter.content options:0];
+            
+            // Decoded NSString from the NSData
+            NSString *base64Decoded = [[NSString alloc]
+                                       initWithData:nsdataFromBase64String encoding:NSUTF8StringEncoding];
+            
+            CGSize size=  [UIView sizeForNoticeTitle:base64Decoded font:[UIFont systemFontOfSize:14.0f]];
+            return size.height+120;
+        }else{
+            return 120;
+        }
+        
     }
    
 }

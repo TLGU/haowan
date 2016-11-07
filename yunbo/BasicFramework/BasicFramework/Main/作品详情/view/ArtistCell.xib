@@ -16,7 +16,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJs-DT-Zgi">
-                        <state key="normal" image="艺术馆详情header"/>
+                        <connections>
+                            <action selector="touchAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bBZ-m5-PS0"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -30,10 +32,7 @@
             <connections>
                 <outlet property="btn" destination="jJs-DT-Zgi" id="RVe-82-jha"/>
             </connections>
-            <point key="canvasLocation" x="-379" y="-104"/>
+            <point key="canvasLocation" x="-367" y="-74"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="艺术馆详情header" width="360" height="188"/>
-    </resources>
 </document>

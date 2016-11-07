@@ -394,6 +394,8 @@ static UIViewController *tempVC = nil;
 
 -(NSDictionary *)constructParams:(NSMutableDictionary*)sender
 {
+    /*
+    
      NSString *name= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
     if (!name||!name.length) {
         return sender;
@@ -436,6 +438,21 @@ static UIViewController *tempVC = nil;
     
     
     return dict;
+     
+     
+     */
+    NSString *login_key= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    sender[@"login_key"]=login_key;
+    NSString * randCode=[self ret32bitString];
+    sender[@"randCode"]=randCode;
+    
+    
+    
+    NSString *user_sign=  [MD5Encryption  md5by32:[NSString stringWithFormat:@"%@%@",login_key,[randCode lowercaseString]]];
+    
+    sender[@"user_sign"]=user_sign;
+    
+    return sender;
     
 }
 

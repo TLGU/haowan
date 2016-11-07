@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
+
+@protocol ArtistCellDelegate <NSObject>
+
+-(void)touchHeaderAction:(id)sender;
+
+@end
+
 @interface ArtistCell : UICollectionViewCell
 @property(strong,nonatomic)Artist *artist;
+
+
+@property(weak,nonatomic)id<ArtistCellDelegate> delegate;
+
+
 @end

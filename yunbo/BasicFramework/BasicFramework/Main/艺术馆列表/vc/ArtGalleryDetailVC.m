@@ -48,7 +48,7 @@ static NSString *ArtGalleryDetailVCCell1ID=@"ArtGalleryDetailVCCell1ID";
 }
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-64-49) style:UITableViewStyleGrouped];;
+        _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStyleGrouped];;
         _tableView.delegate=self;
         _tableView.dataSource=self;
         _tableView.tableHeaderView=self.header;
