@@ -13,4 +13,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgV;
 @property (strong, nonatomic) IBOutlet UIView *baseBackView;
 
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 @end

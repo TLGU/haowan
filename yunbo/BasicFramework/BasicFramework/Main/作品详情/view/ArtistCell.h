@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Artist.h"
 @interface ArtistCell : UICollectionViewCell
-
+@property(strong,nonatomic)Artist *artist;
 @end

@@ -175,6 +175,8 @@ static NetWorkManager *network = nil;
     return NO;
 }
 
+
+
 -(void)requestWithMethod:(RequestMethod)method Url:(NSString*)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
@@ -182,7 +184,17 @@ static NetWorkManager *network = nil;
     if (![self isNotLoginUrl:URL]) {
         parameters=  [self constructParams:parameters];
     }
-   
+    
+    NSString *key= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
+    if (key.length&&[URL isEqualToString:@"front/get_pub.do"])
+    {
+         parameters=  [self constructParams:parameters];
+        
+        
+        
+        
+    }
+    
     
     URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
     
@@ -287,6 +299,8 @@ static NetWorkManager *network = nil;
     
     
     return manager;
+    
+    
 }
 /**
  *  配置请求头
@@ -398,6 +412,8 @@ static UIViewController *tempVC = nil;
     dict[@"isEncryption"]=@"false";
     dict[@"mode"]=@"2";
     
+    
+    
     NSString *paramters=  [self dictionaryToJson:sender];
     dict[@"data"]=paramters;
     
@@ -422,6 +438,8 @@ static UIViewController *tempVC = nil;
     return dict;
     
 }
+
+
 -(NSString *)ret32bitString
 
 {

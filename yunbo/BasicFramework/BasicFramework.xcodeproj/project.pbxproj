@@ -143,6 +143,16 @@
 		C823E32D1DCDE75D00793046 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E32B1DCDE75D00793046 /* ArtistCell.xib */; };
 		C823E3301DCDF5BD00793046 /* SendMsgBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C823E32F1DCDF5BD00793046 /* SendMsgBar.m */; };
 		C823E3321DCDF5C800793046 /* SendMsgBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C823E3311DCDF5C800793046 /* SendMsgBar.xib */; };
+		C826FB681DD05AAF00030632 /* ArtistDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB661DD05AAF00030632 /* ArtistDetailVC.m */; };
+		C826FB691DD05AAF00030632 /* ArtistDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB671DD05AAF00030632 /* ArtistDetailVC.xib */; };
+		C826FB6C1DD065FE00030632 /* ArtistHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB6B1DD065FE00030632 /* ArtistHeaderView.m */; };
+		C826FB6E1DD0660800030632 /* ArtistHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB6D1DD0660800030632 /* ArtistHeaderView.xib */; };
+		C826FB711DD06B8100030632 /* SectionHeaderNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB701DD06B8100030632 /* SectionHeaderNormal.m */; };
+		C826FB731DD06B8D00030632 /* SectionHeaderNormal.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB721DD06B8D00030632 /* SectionHeaderNormal.xib */; };
+		C826FB771DD06EBF00030632 /* JianJieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB751DD06EBF00030632 /* JianJieCell.m */; };
+		C826FB781DD06EBF00030632 /* JianJieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB761DD06EBF00030632 /* JianJieCell.xib */; };
+		C826FB7C1DD06FC400030632 /* ZuoPingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C826FB7A1DD06FC400030632 /* ZuoPingCell.m */; };
+		C826FB7D1DD06FC400030632 /* ZuoPingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C826FB7B1DD06FC400030632 /* ZuoPingCell.xib */; };
 		C86CCBD81DC4792800D9F280 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */; };
 		C86CCBD91DC4792800D9F280 /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */; };
 		C86CCBDA1DC4792800D9F280 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86CCBC61DC4792800D9F280 /* LoginViewController.m */; };
@@ -516,6 +526,21 @@
 		C823E32E1DCDF5BD00793046 /* SendMsgBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgBar.h; sourceTree = "<group>"; };
 		C823E32F1DCDF5BD00793046 /* SendMsgBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMsgBar.m; sourceTree = "<group>"; };
 		C823E3311DCDF5C800793046 /* SendMsgBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMsgBar.xib; sourceTree = "<group>"; };
+		C826FB651DD05AAF00030632 /* ArtistDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistDetailVC.h; sourceTree = "<group>"; };
+		C826FB661DD05AAF00030632 /* ArtistDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailVC.m; sourceTree = "<group>"; };
+		C826FB671DD05AAF00030632 /* ArtistDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistDetailVC.xib; sourceTree = "<group>"; };
+		C826FB6A1DD065FE00030632 /* ArtistHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistHeaderView.h; sourceTree = "<group>"; };
+		C826FB6B1DD065FE00030632 /* ArtistHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistHeaderView.m; sourceTree = "<group>"; };
+		C826FB6D1DD0660800030632 /* ArtistHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistHeaderView.xib; sourceTree = "<group>"; };
+		C826FB6F1DD06B8100030632 /* SectionHeaderNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderNormal.h; sourceTree = "<group>"; };
+		C826FB701DD06B8100030632 /* SectionHeaderNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderNormal.m; sourceTree = "<group>"; };
+		C826FB721DD06B8D00030632 /* SectionHeaderNormal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderNormal.xib; sourceTree = "<group>"; };
+		C826FB741DD06EBF00030632 /* JianJieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianJieCell.h; sourceTree = "<group>"; };
+		C826FB751DD06EBF00030632 /* JianJieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianJieCell.m; sourceTree = "<group>"; };
+		C826FB761DD06EBF00030632 /* JianJieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JianJieCell.xib; sourceTree = "<group>"; };
+		C826FB791DD06FC400030632 /* ZuoPingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuoPingCell.h; sourceTree = "<group>"; };
+		C826FB7A1DD06FC400030632 /* ZuoPingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuoPingCell.m; sourceTree = "<group>"; };
+		C826FB7B1DD06FC400030632 /* ZuoPingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZuoPingCell.xib; sourceTree = "<group>"; };
 		C86CCBC21DC4792800D9F280 /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		C86CCBC31DC4792800D9F280 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		C86CCBC41DC4792800D9F280 /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -1230,6 +1255,7 @@
 		364DA59F1D6584F400F6F424 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				C826FB601DD05A9200030632 /* 艺术家详情 */,
 				C823E3331DCF6DC300793046 /* 发布  */,
 				C823E2D91DCB226C00793046 /* 艺术馆列表 */,
 				C823E2CA1DCA3E4E00793046 /* 我的 */,
@@ -1679,6 +1705,60 @@
 		C823E3381DCF6DC400793046 /* view */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C826FB601DD05A9200030632 /* 艺术家详情 */ = {
+			isa = PBXGroup;
+			children = (
+				C826FB611DD05A9200030632 /* manager */,
+				C826FB621DD05A9200030632 /* model */,
+				C826FB631DD05A9200030632 /* vc */,
+				C826FB641DD05A9200030632 /* view */,
+			);
+			path = "艺术家详情";
+			sourceTree = "<group>";
+		};
+		C826FB611DD05A9200030632 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		C826FB621DD05A9200030632 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C826FB631DD05A9200030632 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				C826FB651DD05AAF00030632 /* ArtistDetailVC.h */,
+				C826FB661DD05AAF00030632 /* ArtistDetailVC.m */,
+				C826FB671DD05AAF00030632 /* ArtistDetailVC.xib */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		C826FB641DD05A9200030632 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C826FB6A1DD065FE00030632 /* ArtistHeaderView.h */,
+				C826FB6B1DD065FE00030632 /* ArtistHeaderView.m */,
+				C826FB6D1DD0660800030632 /* ArtistHeaderView.xib */,
+				C826FB6F1DD06B8100030632 /* SectionHeaderNormal.h */,
+				C826FB701DD06B8100030632 /* SectionHeaderNormal.m */,
+				C826FB721DD06B8D00030632 /* SectionHeaderNormal.xib */,
+				C826FB741DD06EBF00030632 /* JianJieCell.h */,
+				C826FB751DD06EBF00030632 /* JianJieCell.m */,
+				C826FB761DD06EBF00030632 /* JianJieCell.xib */,
+				C826FB791DD06FC400030632 /* ZuoPingCell.h */,
+				C826FB7A1DD06FC400030632 /* ZuoPingCell.m */,
+				C826FB7B1DD06FC400030632 /* ZuoPingCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2519,11 +2599,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C826FB7D1DD06FC400030632 /* ZuoPingCell.xib in Resources */,
 				C86CCC541DC624AA00D9F280 /* HomeHeaderView.xib in Resources */,
 				C86CCC241DC4AE4A00D9F280 /* CommentListVC.xib in Resources */,
 				C823E2F21DCB480200793046 /* ArtGalleryDetailVC.xib in Resources */,
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
 				C86CCBE41DC4792800D9F280 /* Placeholder in Resources */,
+				C826FB781DD06EBF00030632 /* JianJieCell.xib in Resources */,
 				36111AC11D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C86CCBDB1DC4792800D9F280 /* LoginViewController.xib in Resources */,
 				C86CCC6E1DC624ED00D9F280 /* index_banner2@2x.jpg in Resources */,
@@ -2566,6 +2648,7 @@
 				C86CCBDE1DC4792800D9F280 /* RegisterViewController.xib in Resources */,
 				C86CCCA11DC777FC00D9F280 /* Info.plist in Resources */,
 				C86CCBDC1DC4792800D9F280 /* Placeholder in Resources */,
+				C826FB731DD06B8D00030632 /* SectionHeaderNormal.xib in Resources */,
 				C86CCC7C1DC6398B00D9F280 /* HomePageHotCell.xib in Resources */,
 				C823E2D81DCA3FB000793046 /* MeHeader.xib in Resources */,
 				C86CCC771DC6356D00D9F280 /* HomePageCell.xib in Resources */,
@@ -2579,6 +2662,7 @@
 				C8187E7B1DADE9520083AC86 /* README.txt in Resources */,
 				C823E2C41DCA10AE00793046 /* AskAndStudyVC.xib in Resources */,
 				C86E12841DAF41820054ABCE /* GestureTestViewController.xib in Resources */,
+				C826FB691DD05AAF00030632 /* ArtistDetailVC.xib in Resources */,
 				C86E12961DB084BF0054ABCE /* RootCollectionViewCell.xib in Resources */,
 				C86CCC1F1DC4AE1500D9F280 /* BaseProductionVC.xib in Resources */,
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
@@ -2596,6 +2680,7 @@
 				36111AC31D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C823E2D31DCA3E7D00793046 /* MeViewController.xib in Resources */,
 				C86CCC291DC4F27E00D9F280 /* ProductionListCell.xib in Resources */,
+				C826FB6E1DD0660800030632 /* ArtistHeaderView.xib in Resources */,
 				C823E3231DCD8A0F00793046 /* ShuFaListVC.xib in Resources */,
 				C86CCC861DC750C300D9F280 /* HomePageSectionView.xib in Resources */,
 				36111AC21D6EE58C00A03BF4 /* Placeholder in Resources */,
@@ -2757,6 +2842,7 @@
 				C86CCCA71DC777FC00D9F280 /* NSObject+MJClass.m in Sources */,
 				C8187E981DADF5AE0083AC86 /* WXApiManager.m in Sources */,
 				C8A99CDC1D965A1200633A0D /* BasicMainTBC.m in Sources */,
+				C826FB6C1DD065FE00030632 /* ArtistHeaderView.m in Sources */,
 				C823E31D1DCD89DF00793046 /* GuoHuaListVC.m in Sources */,
 				C86CCC801DC74A5700D9F280 /* HomePageHotCollectionCell.m in Sources */,
 				C86CCC531DC624AA00D9F280 /* HomeHeaderView.m in Sources */,
@@ -2782,6 +2868,7 @@
 				C8187E801DADE9520083AC86 /* UMShareMenuSelectionView.m in Sources */,
 				364DA62B1D6584F400F6F424 /* AppSingle.m in Sources */,
 				364DA6501D6584F400F6F424 /* MJRefreshConst.m in Sources */,
+				C826FB711DD06B8100030632 /* SectionHeaderNormal.m in Sources */,
 				C86CCC721DC624ED00D9F280 /* UIViewExt.m in Sources */,
 				C86CCCAA1DC777FC00D9F280 /* NSObject+MJProperty.m in Sources */,
 				C86E12951DB084BF0054ABCE /* RootCollectionViewCell.m in Sources */,
@@ -2795,6 +2882,7 @@
 				C8A99CE31D969F4D00633A0D /* YSLScrollMenuView.m in Sources */,
 				C8187E411DADE5C40083AC86 /* SVIndefiniteAnimatedView.m in Sources */,
 				C86CCBF31DC4927C00D9F280 /* ZTDropdownMenu.m in Sources */,
+				C826FB771DD06EBF00030632 /* JianJieCell.m in Sources */,
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
 				C823E2F51DCB48C500793046 /* ArtGalleryDetailHeader.m in Sources */,
 				C86CCC281DC4F27E00D9F280 /* ProductionListCell.m in Sources */,
@@ -2813,11 +2901,13 @@
 				C86E12831DAF41820054ABCE /* GestureTestViewController.m in Sources */,
 				C86CCC891DC7650600D9F280 /* HotItem.m in Sources */,
 				C86CCC6A1DC624ED00D9F280 /* LBBanner.m in Sources */,
+				C826FB7C1DD06FC400030632 /* ZuoPingCell.m in Sources */,
 				C823E2D21DCA3E7D00793046 /* MeViewController.m in Sources */,
 				C86CCBD81DC4792800D9F280 /* ForgetPwdViewController.m in Sources */,
 				C86E12431DAF2D1B0054ABCE /* DataSigner.m in Sources */,
 				C8A99CE21D969F4D00633A0D /* YSLContainerViewController.m in Sources */,
 				C86CCCAE1DC787D700D9F280 /* ProductionIndex.m in Sources */,
+				C826FB681DD05AAF00030632 /* ArtistDetailVC.m in Sources */,
 				C86CCBF61DC4927C00D9F280 /* ZTTitleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

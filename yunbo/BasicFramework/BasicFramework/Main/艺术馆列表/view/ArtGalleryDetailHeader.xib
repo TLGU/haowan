@@ -129,6 +129,16 @@
                         <constraint firstAttribute="bottom" secondItem="jL7-ZX-l3J" secondAttribute="bottom" id="wCN-dC-djK"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4x-5h-uFB">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="eYi-x3-bxf"/>
+                        <constraint firstAttribute="width" constant="40" id="uos-jL-pLl"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="backAction:" destination="xG5-AW-q1b" eventType="touchUpInside" id="QgC-AS-ajq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -147,19 +157,22 @@
                 <constraint firstItem="t51-Ar-sEk" firstAttribute="top" secondItem="XQ1-Jx-pdw" secondAttribute="bottom" constant="5" id="Ux2-fk-XoL"/>
                 <constraint firstItem="P7n-Gg-j0d" firstAttribute="leading" secondItem="xG5-AW-q1b" secondAttribute="leading" constant="20" id="WX3-G0-fRs"/>
                 <constraint firstItem="Lfz-BB-4mf" firstAttribute="leading" secondItem="XtO-J1-OZN" secondAttribute="trailing" constant="31.5" id="adQ-bV-krl"/>
+                <constraint firstItem="s4x-5h-uFB" firstAttribute="leading" secondItem="xG5-AW-q1b" secondAttribute="leading" constant="10" id="b46-Wy-4I6"/>
                 <constraint firstItem="XQ1-Jx-pdw" firstAttribute="centerY" secondItem="P7n-Gg-j0d" secondAttribute="centerY" id="l5t-LG-Bz3"/>
                 <constraint firstItem="t51-Ar-sEk" firstAttribute="bottom" secondItem="P7n-Gg-j0d" secondAttribute="bottom" id="o98-XN-RZB"/>
                 <constraint firstItem="ryS-XQ-Wrx" firstAttribute="leading" secondItem="XQ1-Jx-pdw" secondAttribute="trailing" constant="3" id="olz-XZ-XPC"/>
                 <constraint firstItem="NWD-wc-7EO" firstAttribute="top" secondItem="xG5-AW-q1b" secondAttribute="top" id="t1W-I7-NhC"/>
+                <constraint firstItem="s4x-5h-uFB" firstAttribute="top" secondItem="xG5-AW-q1b" secondAttribute="top" constant="10" id="tBX-Vb-eAQ"/>
                 <constraint firstItem="XtO-J1-OZN" firstAttribute="leading" secondItem="P7n-Gg-j0d" secondAttribute="trailing" constant="10" id="tnC-I2-o1o"/>
                 <constraint firstItem="HIq-ey-E3d" firstAttribute="top" secondItem="XtO-J1-OZN" secondAttribute="bottom" constant="7.5" id="vuO-AU-94Z"/>
                 <constraint firstItem="t51-Ar-sEk" firstAttribute="leading" secondItem="XtO-J1-OZN" secondAttribute="leading" id="xBt-eg-UsT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-300" y="-73"/>
+            <point key="canvasLocation" x="-518" y="-87"/>
         </view>
     </objects>
     <resources>
+        <image name="back" width="26" height="16"/>
         <image name="index_1" width="20" height="16"/>
         <image name="艺术馆详情" width="101" height="101"/>
         <image name="艺术馆详情header" width="360" height="188"/>

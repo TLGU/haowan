@@ -25,5 +25,16 @@
     
     
 }
-
+-(void)setArtist:(Artist *)artist{
+    _artist=artist;
+    NSString *url=  [NSString stringWithFormat:@"%@%@",YGBaseURL,_artist.picname];
+    [self.btn sd_setBackgroundImageWithURL: [NSURL URLWithString:url] forState:UIControlStateNormal];
+    
+    
+    
+    
+    
+    
+    
+}
 @end

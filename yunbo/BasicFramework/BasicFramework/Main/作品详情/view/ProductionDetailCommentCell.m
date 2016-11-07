@@ -28,7 +28,9 @@
     [super setSelected:selected animated:animated];
 
 }
-
+-(void)setProduction:(Production *)production{
+    _production =production;
+}
 
 
 @end

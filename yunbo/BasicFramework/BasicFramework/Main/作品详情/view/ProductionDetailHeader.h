@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Production.h"
 @protocol ProductionDetailHeaderDelegate <NSObject>
 
 -(void)popAction:(id)sender;
@@ -17,6 +17,10 @@
 @interface ProductionDetailHeader : UIView<UICollectionViewDelegate,UICollectionViewDataSource>
 +(instancetype)header;
 @property(assign,nonatomic)NSInteger rowIndex;
+
+@property(strong,nonatomic)Production *production;
+
+
 
 @property(weak,nonatomic)id<ProductionDetailHeaderDelegate> delegate;
 

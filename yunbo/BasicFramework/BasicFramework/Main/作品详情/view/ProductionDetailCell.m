@@ -27,20 +27,20 @@
     _production=production;
     
     
-//    if (_production.intro) {
-//        // NSData from the Base64 encoded str
-//        NSData *nsdataFromBase64String = [[NSData alloc]
-//                                          initWithBase64EncodedString:_production.intro options:0];
-//        
-//        // Decoded NSString from the NSData
-//        NSString *base64Decoded = [[NSString alloc]
-//                                   initWithData:nsdataFromBase64String encoding:NSUTF8StringEncoding];
-//        
-//        //作品名称
-//        self.contentTextView.text=_production.intro?base64Decoded:@"";
-//    }else{
-//        self.contentTextView.text=@"";
-//    }
+    if (_production.intro) {
+        // NSData from the Base64 encoded str
+        NSData *nsdataFromBase64String = [[NSData alloc]
+                                          initWithBase64EncodedString:_production.intro options:0];
+        
+        // Decoded NSString from the NSData
+        NSString *base64Decoded = [[NSString alloc]
+                                   initWithData:nsdataFromBase64String encoding:NSUTF8StringEncoding];
+        
+        //作品名称
+        self.contentTextView.text=_production.intro?base64Decoded:@"";
+    }else{
+        self.contentTextView.text=@"";
+    }
     
     
     

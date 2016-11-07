@@ -30,7 +30,7 @@
             <connections>
                 <outlet property="btn" destination="jJs-DT-Zgi" id="RVe-82-jha"/>
             </connections>
-            <point key="canvasLocation" x="-258" y="-79"/>
+            <point key="canvasLocation" x="-379" y="-104"/>
         </collectionViewCell>
     </objects>
     <resources>
